@@ -4,7 +4,11 @@ Ejercicios en:
 - 💻 Javascript 
 - 🐍 Python 
 
-**Organización 3er cuatri 2023 - Grupo HELLFISH**  
+<div style="display: flex; justify-content: flex-end; align-items: flex-start;">
+  <img src="https://avatars.githubusercontent.com/t/6707833?s=280&v=4" width="300" height="300" align="right" hspace="20">
+</div>
+
+✎ **Organización 3er cuatri 2023 - Grupo HELLFISH**  
 
 | SEMANA N°  | SCRUM LEAD     |
 | ---------- |----------------|
@@ -17,4 +21,4 @@ Ejercicios en:
 | Semana #7  | Nombre alumno  |
 | Semana #8  | Nombre alumno  |
 
-  <img src="https://avatars.githubusercontent.com/t/6707833?s=280&v=4" alt="Hellfish">
+

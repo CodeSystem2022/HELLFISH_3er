@@ -24,7 +24,7 @@
   <thead>
     <tr>
       <th>Semana</th>
-      <th>SCRUM LEAD</th>
+      <th>SCRUM LEAD / MASTER</th>
     </tr>
   </thead>
   <tbody>
@@ -63,7 +63,8 @@
   </tbody>
 </table>
 
-<p align="left"><li><strong>Nota:</strong><br>Utilizamos :star: para marcar al SCRUM LEAD de cada semana.</li></p>
+<p align="left"><li><strong>Nota:</strong><br>Utilizamos :star: para marcar al SCRUM MASTER de cada semana.</li></p>
+<br>
 <hr>
 <h2 align="center">Metodología de trabajo SCRUM / KANBAN</h2>
 <p align="center">Utilizamos la metodología de trabajo SCRUM junto con un tablero KANBAN para organizar nuestras tareas. Todas las tareas de nuestro equipo se almacenan en el backlog, el cual está dentro de nuestro dashboard. En nuestro dashboard, las tareas pasan por los siguientes estados:</p>
@@ -77,3 +78,4 @@
 | En revisión    | Una vez finalizada la tarea, creamos una solicitud de unión (merge request) para que otro integrante del equipo pueda hacer una revisión del código y fusionarlo a la rama principal (main) | <span style="font-size:2em;">🕵️‍♀️</span>  |
 | Finalizadas    | Las tareas que han sido finalizadas y revisadas                                                               | <span style="font-size:2em;">✅</span>    |
 
+<br>

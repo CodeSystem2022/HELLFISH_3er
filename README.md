@@ -1,7 +1,7 @@
-<h1 align="center">HELLFISH 3er cuatrimestre 🔥🐟</h1>
+<h1>HELLFISH 3er cuatrimestre 🔥🐟</h1>
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://simpsons.fandom.com/es/wiki/Flying_Hellfish"><img src="https://avatars.githubusercontent.com/t/6707833?s=280&v=4" alt="Logo" width="150" height="150" align="right" hspace="20"></a>
+  <a href="https://simpsons.fandom.com/es/wiki/Flying_Hellfish"><img src="https://avatars.githubusercontent.com/t/6707833?s=280&v=4" alt="Logo" width="200" height="200" align="right" hspace="20"></a>
   <div>
     <p>Ejercicios en:</p>
     <div style="display: flex; justify-content: center;">
@@ -18,64 +18,30 @@
 
 <br>
 
-<h2 align="center">Organización 3er cuatri 2023 - Grupo HELLFISH</h2>
+<h2>Organización 3er cuatrimestre 2023</h2>
 
-<table align="center">
-  <thead>
-    <tr>
-      <th>Semana</th>
-      <th>SCRUM LEAD / MASTER</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">1</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-    <tr>
-      <td align="center">2</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-    <tr>
-      <td align="center">3</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-    <tr>
-      <td align="center">4</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-    <tr>
-      <td align="center">5</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-    <tr>
-      <td align="center">6</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-    <tr>
-      <td align="center">7</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-    <tr>
-      <td align="center">8</td>
-      <td align="center">:star: Nombre alumno</td>
-    </tr>
-  </tbody>
-</table>
+| Semana |    SCRUM master  |
+| :----: |:----------------:|
+|   1    |   Nombre alumno  |
+|   2    |   Nombre alumno  |
+|   3    |   Nombre alumno  |
+|   4    |   Nombre alumno  |
+|   5    |   Nombre alumno  |
+|   6    |   Nombre alumno  |
+|   7    |   Nombre alumno  |
+|   8    |   Nombre alumno  |
 
-<p align="left"><li><strong>Nota:</strong><br>Utilizamos :star: para marcar al SCRUM MASTER de cada semana.</li></p>
-<br>
-<hr>
-<h2 align="center">Metodología de trabajo SCRUM / KANBAN</h2>
-<p align="center">Utilizamos la metodología de trabajo SCRUM junto con un tablero KANBAN para organizar nuestras tareas. Todas las tareas de nuestro equipo se almacenan en el backlog, el cual está dentro de nuestro dashboard. En nuestro dashboard, las tareas pasan por los siguientes estados:</p>
+# Metodología de trabajo SCRUM / KANBAN
+<p>Utilizamos la metodología de trabajo SCRUM junto con un tablero KANBAN para organizar nuestras tareas. Todas las tareas de nuestro equipo se almacenan en el backlog, el cual está dentro de nuestro dashboard. En nuestro dashboard, las tareas pasan por los siguientes estados:</p>
 <br>
 
 
-| Estado         | Descripción                                                                                                   | Emoji |
-| -------------- | ------------------------------------------------------------------------------------------------------------- | ----- |
-| Para asignar   | Asignamos las tareas del Sprint activo a los miembros del equipo                                              | <span style="font-size:2em;">🎯</span>    |
-| En progreso    | Las tareas que fueron tomadas por los integrantes del equipo en el Sprint                                     | <span style="font-size:2em;">🏃‍♂️</span>  |
-| En revisión    | Una vez finalizada la tarea, creamos una solicitud de unión (merge request) para que otro integrante del equipo pueda hacer una revisión del código y fusionarlo a la rama principal (main) | <span style="font-size:2em;">🕵️‍♀️</span>  |
-| Finalizadas    | Las tareas que han sido finalizadas y revisadas                                                               | <span style="font-size:2em;">✅</span>    |
+| Estado               | Descripción                                                                                             | Emoji |
+|---------------------|---------------------------------------------------------------------------------------------------------|-------|
+| Asignación en curso | Estamos asignando las tareas del sprint actual a los miembros del equipo                                | 🎯    |
+| En progreso         | Las tareas que los miembros del equipo están realizando durante el sprint                                | 🏃‍♂️   |
+| En revisión         | Una vez que la tarea se completa, creamos una solicitud de unión para que otro miembro del equipo revise el código y lo integre en la rama principal (main) | 🕵️‍♀️ |
+| Finalizadas          | Las tareas que se han completado y revisado con éxito                                                   | ✅    |
+
 
 <br>

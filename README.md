@@ -22,7 +22,7 @@
 
 | Semana |    SCRUM master  |
 | :----: |:----------------:|
-|   1    |   Nombre alumno  |
+|   1    |    [@elfabri](https://github.com/elfabri)    |
 |   2    |   Nombre alumno  |
 |   3    |   Nombre alumno  |
 |   4    |   Nombre alumno  |

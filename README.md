@@ -20,11 +20,11 @@
 
 <h2>Organización 3er cuatrimestre 2023</h2>
 
-| Semana |    SCRUM master  |
+| Semana |    Team Lead  |
 | :----: |:----------------:|
 |   1    |    [@elfabri](https://github.com/elfabri)    |
 |   2    |   Nombre alumno  |
-|   3    |   Nombre alumno  |
+|   3    |   [@Ana Ascua](https://github.com/aniascua)  |
 |   4    |   Nombre alumno  |
 |   5    |   Nombre alumno  |
 |   6    |   Nombre alumno  |

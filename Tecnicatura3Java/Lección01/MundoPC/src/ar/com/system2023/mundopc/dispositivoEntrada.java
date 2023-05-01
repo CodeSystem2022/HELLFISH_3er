@@ -1,17 +1,16 @@
 
 package ar.com.system2023.mundopc;
 
-public class dispositivoEntrada {
+
+public class DispositivoEntrada {
     private String tipoEntrada;
     private String marca;
     
-    public dispositivoEntrada(String tipoEntrada, String marca){
-        this.tipoEntrada = tipoEntrada;
+    public DispositivoEntrada (String tipoEntrada, String marca){
+        this.tipoEntrada= tipoEntrada;
         this.marca = marca;
     }
-    
-    // Getters y Setters
-    
+
     public String getTipoEntrada() {
         return this.tipoEntrada;
     }
@@ -30,6 +29,6 @@ public class dispositivoEntrada {
 
     @Override
     public String toString() {
-        return "dispositivoEntrada{" + "tipoEntrada=" + tipoEntrada + ", marca=" + marca + '}';
+        return "DispositivoEntrada{" + "tipoEntrada=" + tipoEntrada + ", marca=" + marca + '}';
     }
 }

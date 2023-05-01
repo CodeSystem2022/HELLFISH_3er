@@ -10,10 +10,10 @@ public class Monitor {
         this.idMonitor = ++Monitor.contadorMonitores;
     }
     
-    public Monitor(String marca, double tamanio){
-        this(); // Llamado al constructor vacío
+    public Monitor (String marca, double tamanio){
+        this(); // Llamado al constructor vacio
         this.marca = marca;
-        this.tamanio = tamanio;
+        this.tamanio= tamanio;
     }
 
     public String getMarca() {
@@ -31,9 +31,8 @@ public class Monitor {
     public void setTamanio(double tamanio) {
         this.tamanio = tamanio;
     }
-    
     // Ingresamos manualmente el getIdMonitor
-    public int getIdMonitori(){
+    public int getIdMonitor(){
         return this.idMonitor;
     }
 
@@ -41,6 +40,5 @@ public class Monitor {
     public String toString() {
         return "Monitor{" + "idMonitor=" + idMonitor + ", marca=" + marca + ", tamanio=" + tamanio + '}';
     }
-    
     
 }

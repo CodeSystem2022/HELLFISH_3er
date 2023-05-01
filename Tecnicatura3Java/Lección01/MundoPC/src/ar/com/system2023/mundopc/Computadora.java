@@ -1,4 +1,3 @@
-
 package ar.com.system2023.mundopc;
 
 public class Computadora {
@@ -9,21 +8,21 @@ public class Computadora {
     private Raton raton;
     private static int contadorComputadoras;
     
-    // Constructor vacío
+    //Constructor vacio
     private Computadora(){
-        this.idComputadora = ++Computadora.contadorComputadoras;
+        this.idComputadora=++Computadora.contadorComputadoras;
     }
     
     // Constructor 2
-    public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton){
-        this(); // Llamado al constructor vacío
+    public Computadora (String nombre, Monitor monitor, Teclado teclado, Raton raton){
+        this();
         this.nombre = nombre;
-        this.monitor = monitor;
-        this.teclado = teclado;
+        this.monitor= monitor;
+        this.teclado= teclado;
         this.raton = raton;
     }
 
-    public int getIdComputadora(){
+    public int getidComputadora(){
         return idComputadora;
     }
     
@@ -31,21 +30,37 @@ public class Computadora {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Monitor getMonitor() {
-        return this.monitor;
+        return monitor;
+    }
+
+    public void setMonitor(Monitor monitor) {
+        this.monitor = monitor;
     }
 
     public Teclado getTeclado() {
-        return this.teclado;
+        return teclado;
+    }
+
+    public void setTeclado(Teclado teclado) {
+        this.teclado = teclado;
     }
 
     public Raton getRaton() {
         return raton;
     }
 
+    public void setRaton(Raton raton) {
+        this.raton = raton;
+    }
+
     @Override
     public String toString() {
         return "Computadora{" + "idComputadora=" + idComputadora + ", nombre=" + nombre + ", monitor=" + monitor + ", teclado=" + teclado + ", raton=" + raton + '}';
     }
+    
 }
-

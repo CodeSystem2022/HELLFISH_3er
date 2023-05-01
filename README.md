@@ -26,7 +26,7 @@
 |   2    |   Nombre alumno  |
 |   3    |   [@Ana Ascua](https://github.com/aniascua)  |
 |   4    |   Nombre alumno  |
-|   5    |   Nombre alumno  |
+|   5    |   [@AgusAdTello](https://github.com/AgusAdTello)  |
 |   6    |   [@NazarenoTello](https://github.com/nazarenotello)  |
 |   7    |   Nombre alumno  |
 |   8    |   Nombre alumno  |

@@ -33,3 +33,7 @@
 - **Sprint Backlog:** Asignamos tareas del "Product Backlog" a los miembros del equipo 
 - **En revisión:** Tareas que han sido completadas y están siendo revisadas por otro miembro del equipo para luego hacer merge con la rama main
 - **Finalizadas:** Tareas que se han completado y revisado con éxito 
+
+[Proyectos](https://github.com/CodeSystem2022/HELLFISH_3er/projects?query=is%3Aopen)
+<br>
+[Discussions](https://github.com/CodeSystem2022/HELLFISH_3er/discussions/44)

@@ -30,6 +30,6 @@
 
 # Metodología de trabajo SCRUM
 - **Product Backlog:** Lista de tareas que se deben implementar en el proyecto 
-- **Sprint Backlog:** Tareas seleccionadas del "Product Backlog" que se deben completar durante el sprint actual, asignadas a los miembros del equipo 
-- **En revisión:** Tareas que han sido completadas y están siendo revisadas por otro miembro del equipo 
+- **Sprint Backlog:** Asignamos tareas del "Product Backlog" a los miembros del equipo 
+- **En revisión:** Tareas que han sido completadas y están siendo revisadas por otro miembro del equipo para luego hacer merge con la rama main
 - **Finalizadas:** Tareas que se han completado y revisado con éxito 

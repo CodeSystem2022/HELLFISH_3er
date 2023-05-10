@@ -15,3 +15,17 @@ function cambiarValor(a) {
 }
 
 cambiarValor(k); // le pasamos solo el valor de k, no la referencia a k, no se va a modificar el valor de k
+
+// Paso por referencia
+const persona = {
+    nombre: "Juan",
+    apellid: "Leper"
+}
+
+function cambiarValorObjeto(p1) {
+    p1.nombre = "Juana";
+    p1.apellido = "Lepez";
+}
+
+cambiarValorObjeto(persona); // se envia la dirección de memoria del obj persona y modifica todo
+console.log(persona);

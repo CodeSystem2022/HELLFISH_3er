@@ -9,7 +9,7 @@ public class TestConversionObjetos {
         empleado = new Escritor("Juana", 5000, TipoEscritura.CLASICO);
         // System.out.println("empleado = " + empleado);
 
-        // System.out.println(empleado.obtenerDetalles());  // tiene en cuenta override
+        System.out.println(empleado.obtenerDetalles());  // tiene en cuenta override
         // de la clase Escritor
 
         // empleado.getTipoEscritura(); // método no definido en clase empleado, por lo que
@@ -27,6 +27,7 @@ public class TestConversionObjetos {
         escritor.getTipoEscritura();
 
         // Upcasting
+        // de clase hija a padre
         Empleado empleado2 = escritor;
         System.out.println(empleado2.obtenerDetalles());
     }

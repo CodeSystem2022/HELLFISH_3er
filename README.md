@@ -23,7 +23,7 @@
 |   4    | Nombre alumno |   [Proyecto 396](https://github.com/orgs/CodeSystem2022/projects/396)    |
 |   5    | [@AgusAdTello](https://github.com/AgusAdTello) | [Proyecto 409](https://github.com/orgs/CodeSystem2022/projects/409)|
 |   6    | [@NazarenoTello](https://github.com/nazarenotello) |    -     |
-|   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    -     |
+|   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    .     |
 |   8    | Nombre alumno |    -     |
 |   9    | Nombre alumno |    -     |
 |  10    | Nombre alumno |    -     |

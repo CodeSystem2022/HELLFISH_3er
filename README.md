@@ -1,7 +1,10 @@
 <h1>HELLFISH 3er cuatrimestre 🔥🐟</h1>
+<p align="center">
+    <img width="100%" src="https://github.com/ludmilailen/HellfishGif/blob/main/Hellfish_intro.gif"> 
+</p>
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://simpsons.fandom.com/es/wiki/Flying_Hellfish"><img src="https://avatars.githubusercontent.com/t/6707833?s=280&v=4" alt="Logo" width="200" height="200" align="right" hspace="20"></a>
+ 
   <div>
     <div style="display: flex; justify-content: center;">
       <a href="https://www.java.com/"><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" alt="Java" width="90" height="90" style="margin-left: 10px;"></a>

@@ -25,8 +25,8 @@
 |   3    | [@Ana Ascua](https://github.com/aniascua) | [Proyecto 259](https://github.com/orgs/CodeSystem2022/projects/259)|
 |   4    | Nombre alumno |   [Proyecto 396](https://github.com/orgs/CodeSystem2022/projects/396)    |
 |   5    | [@AgusAdTello](https://github.com/AgusAdTello) | [Proyecto 409](https://github.com/orgs/CodeSystem2022/projects/409)|
-|   6    | [@NazarenoTello](https://github.com/nazarenotello) |    -     |
-|   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    -     |
+|   6    | [@NazarenoTello](https://github.com/nazarenotello) |    [Proyecto 434](https://github.com/orgs/CodeSystem2022/projects/434)     |
+|   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    [Proyecto 461](https://github.com/orgs/CodeSystem2022/projects/461)     |
 |   8    | [@Macelluna](https://github.com/Macelluna) |    -     |
 |   9    | Nombre alumno |    -     |
 |  10    | Nombre alumno |    -     |

@@ -23,10 +23,10 @@
 |   1    | [@elfabri](https://github.com/elfabri) |    [Proyecto 177](https://github.com/orgs/CodeSystem2022/projects/177)     |
 |   2    | [@ludmilailen](https://github.com/ludmilailen) |   [Proyecto 220](https://github.com/orgs/CodeSystem2022/projects/220)    |
 |   3    | [@Ana Ascua](https://github.com/aniascua) | [Proyecto 259](https://github.com/orgs/CodeSystem2022/projects/259)|
-|   4    | Nombre alumno |   [Proyecto 396](https://github.com/orgs/CodeSystem2022/projects/396)    |
+|   4    | [@SofiaaSottile18](https://github.com/SofiaaSottile18) |   [Proyecto 396](https://github.com/orgs/CodeSystem2022/projects/396)    |
 |   5    | [@AgusAdTello](https://github.com/AgusAdTello) | [Proyecto 409](https://github.com/orgs/CodeSystem2022/projects/409)|
-|   6    | [@NazarenoTello](https://github.com/nazarenotello) |    -     |
-|   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    -     |
+|   6    | [@NazarenoTello](https://github.com/nazarenotello) |    [Proyecto 434](https://github.com/orgs/CodeSystem2022/projects/434)     |
+|   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    [Proyecto 461](https://github.com/orgs/CodeSystem2022/projects/461)     |
 |   8    | [@Macelluna](https://github.com/Macelluna) |    -     |
 |   9    | Nombre alumno |    -     |
 |  10    | Nombre alumno |    -     |

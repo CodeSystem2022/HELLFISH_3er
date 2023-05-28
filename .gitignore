@@ -1,3 +1,8 @@
 /Tecnicatura3Java/Lección01/MundoPC/nbproject/private/
 /Tecnicatura3Java/Lección01/MundoPC/build/
-/Tecnicatura3Java/Leccion06/Interfaces/nbproject/private/
+/Tecnicatura3Java/*/*/nbproject/
+/Tecnicatura3Java/*/*/build.xml
+/Tecnicatura3Java/*/*/manifest.xml
+/Tecnicatura3Java/*/*/nbproject/
+/Tecnicatura3Java/*/nbproject/
+/Tecnicatura3Java/build.xml

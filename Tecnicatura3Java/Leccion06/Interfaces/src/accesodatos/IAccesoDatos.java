@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package accesodatos;
 
-/**
- *
- * @author Usuario
- */
 public interface IAccesoDatos {
-    
+    // No hereda de object, pero puede haber herencia entre interfaces 
+    int MAX_REGISTRO = 10; // automaticamente es public final static
+                           // y es necesario asignar un valor al declarar
+
+    // Cualquier método es público y abstracto
+    void insertar();
+    void listar();
+    void actualizar();
+    void eliminar();
 }

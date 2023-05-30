@@ -56,6 +56,18 @@ let sumar = function(a = 4, b = 8) {
 resultado = sumar(3, 2, 9);
 console.log(resultado);
 
+// cant de args variables y además, usando hoisting
+let respuesta = sumarTodo(5, 5, 5, 5, 5, 5, 5);
+console.log(respuesta);
+
+function sumarTodo() {
+    let suma = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        suma += arguments[i];
+    }
+    return suma;
+}
+
 // Paso por valor
 // Tipos primitivos
 let k = 10;

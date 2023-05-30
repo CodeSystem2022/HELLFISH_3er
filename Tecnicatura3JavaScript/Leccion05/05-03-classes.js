@@ -13,6 +13,7 @@ class Persona {
         return this._nombre;
     }
 
+    // video 6 - solo completa esto
     get apellido() {
         return this._apellido;
     }

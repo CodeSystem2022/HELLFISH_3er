@@ -11,10 +11,17 @@ miFuncion(5,4);
 let resultado = miFuncion(6, 7);
 console.log(resultado);
 
-// Función de tipo expresión o anónima
-let x1 = function(a, b) { return a + b};
-resultado = x1(5, 6);
+//Maricel Luna
+// Declaramos una función de tipo expresión
+let x = function(a, b) { return a + b };
+resultado = x (5, 6);
 console.log(resultado);
+
+//Maricel Luna
+// Funciones de tipo self e invoking
+(function(a, b) {
+    console.log("Ejecutando la función: " + (a + b));
+} (9, 6));
 
 // Paso por valor
 // Tipos primitivos
@@ -39,15 +46,4 @@ function cambiarValorObjeto(p1) {
 cambiarValorObjeto(persona); // se envia la dirección de memoria del obj persona y modifica todo
 console.log(persona);
 
-//Maricel Luna
-// Declaramos una función de tipo expresión
-let x = function(a, b) { return a + b };
-resultado = x (5, 6);
-console.log(resultado);
 
-
-//Maricel Luna
-// Funciones de tipo self e invoking
-(function(a, b) {
-    console.log("Ejecutando la función: " + (a + b));
-} (9, 6));

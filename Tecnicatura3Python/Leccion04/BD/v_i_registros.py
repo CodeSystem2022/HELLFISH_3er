@@ -4,11 +4,11 @@ import psycopg2 # Esto es para poder conectarnos a PostgreSQL
 
 # Conectarse a la base de datos creando una conexión
 conexion = psycopg2.connect(
-    user='postgres',
-    password='Administrador',
-    host='localhost',
-    port='5432',
-    database='test_bd'
+    user="postgres",
+    password="admin",
+    host="127.0.0.1",
+    port="5432",
+    database="test_bd"
 )
 
 try:
@@ -17,9 +17,9 @@ try:
             sentencia = 'INSERT INTO persona (nombre, apellido, email) VALUES (%s, %s, %s)'
             # Insertamos varios registros:
             valores = (
-                ('Carlos', 'Lara', 'claro@mail.com'),
-                ('Marcos', 'Canto', 'mcanto@mail.com'),
-                ('Marcelo', 'Cuenca', 'cuencaM@mail.com')
+                ('Carlas', 'Lara', 'claro@mail.com'),
+                ('Marcas', 'Canto', 'mcanto@mail.com'),
+                ('Marcela', 'Cuenca', 'cuencaM@mail.com')
             ) # Esto es una tupla de tuplas
 
             cursor.executemany(sentencia, valores) # De esta manera ejecutamos la sentencia

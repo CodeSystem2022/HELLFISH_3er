@@ -1,4 +1,8 @@
 // Clase 06 - 15-05
+
+// let persona3 = new Persona("Carla", "P"); // Error - no se puede acceder
+                                             // a una clase antes de su definición
+
 class Persona {
     constructor(nombre, apellido) {
         this._nombre = nombre;

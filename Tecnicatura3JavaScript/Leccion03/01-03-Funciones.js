@@ -11,6 +11,11 @@ miFuncion(5,4);
 let resultado = miFuncion(6, 7);
 console.log(resultado);
 
+// Función de tipo expresión o anónima
+let x1 = function(a, b) { return a + b};
+resultado = x1(5, 6);
+console.log(resultado);
+
 // Paso por valor
 // Tipos primitivos
 let k = 10;

@@ -23,6 +23,24 @@ console.log(resultado);
     console.log("Ejecutando la función: " + (a + b));
 } (9, 6));
 
+
+console.log(typeof miFuncion); // tipo function, que es un objeto y tiene métodos
+
+function miFuncionDos(a, b) {
+    //console.log(arguments); // método arguments devuelve {0:5, 1:7} los valores con que fue llamada
+
+    console.log(arguments.length); // cantidad de arg que recive la función, no tiene en cuenta 
+    // los args declarados en la definición sino los arg con que fue llamada
+    // no se puede usar arguments.length fuera de la función
+}
+
+miFuncionDos(5, 7);
+
+// toString
+var miFuncionTexto = miFuncionDos.toString();
+console.log(miFuncionTexto); // transcribe la función a txt, no el retorno sino la declaración de
+// la función en sí, utilizando cosas raras
+
 // Paso por valor
 // Tipos primitivos
 let k = 10;

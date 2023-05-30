@@ -23,7 +23,6 @@ console.log(resultado);
     console.log("Ejecutando la función: " + (a + b));
 } (9, 6));
 
-
 console.log(typeof miFuncion); // tipo function, que es un objeto y tiene métodos
 
 function miFuncionDos(a, b) {
@@ -44,6 +43,17 @@ console.log(miFuncionTexto); // transcribe la función a txt, no el retorno sino
 // Funciones Flecha
 const sumarFuncionFlecha = (a, b) => a + b;
 resultado = sumarFuncionFlecha(3, 7);
+console.log(resultado);
+
+// en js, la cantidad de parámetros puede ser menor a los argumentos
+// Función tipo expresión
+let sumar = function(a = 4, b = 8) {
+    console.log(arguments[0]); // ignora los valores por defecto
+    console.log(arguments[1]);
+    return a + b + arguments[2];
+}
+
+resultado = sumar(3, 2, 9);
 console.log(resultado);
 
 // Paso por valor

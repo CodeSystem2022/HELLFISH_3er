@@ -11,11 +11,11 @@ conexion = psycopg2.connect(
 try:
     with conexion:
         with conexion.cursor() as cursor:
-            # sentencia = "SELECT * FROM persona"
-            # sentencia = "SELECT \"idPersona\", nombre FROM persona"
-            # sentencia = "SELECT * FROM persona WHERE \"idPersona\" = 1"
-            sentencia = "SELECT * FROM persona WHERE \"idPersona\" IN (1, 2)"
-            cursor.execute(sentencia)
+            sentencia = "SELECT * FROM persona WHERE \"idPersona\" IN %s"
+            # entrada = input("Ingrese id_persona a buscar (separados por coma): ")
+            # llaves_primarias = (tuple(entrada.split(", ")),)
+            llaves_primarias = ((1, 2, 3),)
+            cursor.execute(sentencia, llaves_primarias)
             # Registramos datos
             registros = cursor.fetchall()  # devuelve una tupla con los datos
             for registro in registros:

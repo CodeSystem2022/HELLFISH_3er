@@ -1,6 +1,5 @@
 // Clase 06 - 15-05
 
-//
 class Persona { //Clase padre
     constructor(nombre, apellido) {
         this._nombre = nombre;
@@ -23,6 +22,18 @@ class Persona { //Clase padre
     set apellido(s) {
         this._apellido = s;
     }
+
+    nombreCompleto() {
+        return this._nombre + ' ' + this._apellido;
+    }
+
+    // Sobreescribiendo método de la clase padre (object)
+    toString() {
+        // Se aplica Polimorfismo
+        // El método que se ejecuta depende de si es
+        // una referencia de tipo padre o hija
+        return this.nombreCompleto();
+    }
 }
 
 class Empleado extends Persona { //Clase hija
@@ -37,6 +48,10 @@ class Empleado extends Persona { //Clase hija
 
     set departamento(departamento) {
         this._departamento = departamento;
+    }
+
+    nombreCompleto() {
+        return super.nombreCompleto() + ", " + this._departamento;
     }
 }
 
@@ -58,4 +73,6 @@ console.log(persona2.nombre + persona2.apellido);
 
 let empleado1 = new Empleado("María", "E", "Sistemas");
 console.log(empleado1);
-console.log(empleado1.nombre)
+console.log(empleado1.nombreCompleto());
+console.log(empleado1.toString());
+console.log(persona1.toString());

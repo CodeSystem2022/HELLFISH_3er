@@ -27,7 +27,11 @@ class Persona { //Clase padre
         return this._nombre + ' ' + this._apellido;
     }
 
+    // Sobreescribiendo método de la clase padre (object)
     toString() {
+        // Se aplica Polimorfismo
+        // El método que se ejecuta depende de si es
+        // una referencia de tipo padre o hija
         return this.nombreCompleto();
     }
 }
@@ -71,3 +75,4 @@ let empleado1 = new Empleado("María", "E", "Sistemas");
 console.log(empleado1);
 console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
+console.log(persona1.toString());

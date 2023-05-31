@@ -1,9 +1,7 @@
 // Clase 06 - 15-05
 
-// let persona3 = new Persona("Carla", "P"); // Error - no se puede acceder
-                                             // a una clase antes de su definición
-
-class Persona {
+//
+class Persona { //Clase padre
     constructor(nombre, apellido) {
         this._nombre = nombre;
         this._apellido = apellido;
@@ -13,7 +11,7 @@ class Persona {
         return this._nombre;
     }
 
-    // video 6 - solo completa esto
+   
     get apellido() {
         return this._apellido;
     }
@@ -24,6 +22,21 @@ class Persona {
 
     set apellido(s) {
         this._apellido = s;
+    }
+}
+
+class Empleado extends Persona { //Clase hija
+    constructor(nombre, apellido, departamento) {
+        super(nombre, apellido);
+        this._departamento = departamento;
+    }
+
+    get departamento() {
+        return this._departamento;
+    }
+
+    set departamento(departamento) {
+        this._departamento = departamento;
     }
 }
 
@@ -42,3 +55,7 @@ persona2.nombre = "Romina";
 console.log(persona2.nombre);
 persona2.apellido = "S"
 console.log(persona2.nombre + persona2.apellido);
+
+let empleado1 = new Empleado("María", "E", "Sistemas");
+console.log(empleado1);
+console.log(empleado1.nombre)

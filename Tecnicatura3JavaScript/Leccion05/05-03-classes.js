@@ -1,6 +1,5 @@
 // Clase 06 - 15-05
 
-//
 class Persona { //Clase padre
     constructor(nombre, apellido) {
         this._nombre = nombre;
@@ -22,6 +21,10 @@ class Persona { //Clase padre
 
     set apellido(s) {
         this._apellido = s;
+    }
+
+    nombreCompleto() {
+        return this._nombre + ' ' + this._apellido;
     }
 }
 
@@ -58,4 +61,4 @@ console.log(persona2.nombre + persona2.apellido);
 
 let empleado1 = new Empleado("María", "E", "Sistemas");
 console.log(empleado1);
-console.log(empleado1.nombre)
+console.log(empleado1.nombreCompleto());

@@ -30,7 +30,7 @@
 |   8    | [@Macelluna](https://github.com/Macelluna) |    -     |
 |   9    | Nombre alumno |    -     |
 |  10    | Nombre alumno |    -     |
-|  11    | Proyecto Integrador Python |    https://github.com/orgs/CodeSystem2022/projects/693     |
+|  11    | [Proyecto Integrador Python](https://github.com/CodeSystem2022/HELLFISH_3er/tree/main/Proyecto%20Python) |    [Proyecto 693](https://github.com/orgs/CodeSystem2022/projects/693)     |
 
 # Metodología de trabajo SCRUM
 - *Product Backlog:* Lista de tareas que se deben implementar en el proyecto 

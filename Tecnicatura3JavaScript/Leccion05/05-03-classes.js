@@ -86,7 +86,7 @@ console.log(empleado1.toString());
 console.log(persona1.toString());
 
 // Object.prototype.toString // Esta es la manera de acceder a atributos y métodos de manera dinámica
-console.log(empleado1.toString);
+console.log(empleado1.toString());
 console.log(persona1.toString());
 
 // Clase 7 - JAVA 8.1 atributos static

@@ -35,7 +35,24 @@ class Persona { //Clase padre
         return this.nombreCompleto();
     }
 }
+// Clase 8 JAVA - 29/05/2023
+// 8.1 Palabra static con métodos parte 1 y 2
 
+// Sobreescribiendo el método de la clase padre (Object)
+    toString(){ // Regresa un String
+    // Se aplica el polimorfismo que significa = múltiples formas en tiempo de ejecución
+    // El método que se ejecuta depende si es una referencia de tipo padre o hija
+        return this.nombreCompleto();
+}
+
+static saludar(){
+    console.log('Saludos desde este método static');
+}
+
+static saludar2(persona){
+    console.log(persona.nombre+' '+persona.apellido);
+}
+  
 class Empleado extends Persona { //Clase hija
     constructor(nombre, apellido, departamento) {
         super(nombre, apellido);
@@ -76,3 +93,10 @@ console.log(empleado1);
 console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
 console.log(persona1.toString());
+
+//persona1.saludar(); no se utiliza desde el objeto
+Persona.saludar();
+Persona.saludar2(persona1);
+
+Empleado.saludar();
+Empleado.saludar2(empleado1);

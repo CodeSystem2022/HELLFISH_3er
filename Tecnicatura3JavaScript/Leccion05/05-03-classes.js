@@ -1,6 +1,9 @@
 // Clase 06 - 15-05
 
 class Persona { //Clase padre
+    
+    static contadorObjetosPersona = 0;
+    
     constructor(nombre, apellido) {
         this._nombre = nombre;
         this._apellido = apellido;
@@ -9,8 +12,7 @@ class Persona { //Clase padre
     get nombre() {
         return this._nombre;
     }
-
-   
+    
     get apellido() {
         return this._apellido;
     }
@@ -27,12 +29,18 @@ class Persona { //Clase padre
         return this._nombre + ' ' + this._apellido;
     }
 
-    // Sobreescribiendo método de la clase padre (object)
-    toString() {
-        // Se aplica Polimorfismo
-        // El método que se ejecuta depende de si es
-        // una referencia de tipo padre o hija
+    // Sobreescribiendo el método de la clase padre (Object)
+    toString(){ // Regresa un String
+    // Se aplica el polimorfismo que significa = múltiples formas en tiempo de ejecución
+    // El método que se ejecuta depende si es una referencia de tipo padre o hija
         return this.nombreCompleto();
+    }
+    static saludar(){
+        console.log('Saludos desde este método static');
+    }
+    
+    static saludar2(persona){
+        console.log(persona.nombre+' '+persona.apellido);
     }
 }
 
@@ -76,3 +84,19 @@ console.log(empleado1);
 console.log(empleado1.nombreCompleto());
 console.log(empleado1.toString());
 console.log(persona1.toString());
+
+// Object.prototype.toString // Esta es la manera de acceder a atributos y métodos de manera dinámica
+console.log(empleado1.toString);
+console.log(persona1.toString());
+
+// Clase 7 - JAVA 8.1 atributos static
+//persona1.saludar(); No se utiliza desde el objeto
+Persona.saludar();
+Persona.saludar2(persona1);
+
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+
+//console.log(persona1.contadorObjetosPersona);
+console.log(Persona.contadorObjetosPersona);
+console.log(Empleado.contadorObjetosPersona);

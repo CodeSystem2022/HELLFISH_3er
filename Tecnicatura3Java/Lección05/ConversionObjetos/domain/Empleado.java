@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 public class Empleado {
     protected String nombre;
     protected double sueldo;
@@ -29,4 +31,3 @@ public class Empleado {
     public void setSueldo(double sueldo){
         this.sueldo = sueldo;
     }
-}

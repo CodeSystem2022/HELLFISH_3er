@@ -1,11 +1,10 @@
-<h1>🐟🔥 3er cuatrimestre 🔥🐟</h1>
+<h1 align="center">🐟🔥 3er cuatrimestre 🔥🐟</h1>
 <p align="center">
     <img width="100%" src="https://github.com/ludmilailen/HellfishGif/blob/main/Hellfish_intro.gif"> 
 </p>
 
 <div style="display: flex; justify-content: center; align-items: center;">
- 
-  <div>
+  <div align="center">
     <div style="display: flex; justify-content: center;">
       <a href="https://www.java.com/"><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" alt="Java" width="90" height="90" style="margin-left: 10px;"></a>
       <a href="https://www.javascript.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" width="80" height="80" style="margin-left: 10px;"></a>
@@ -13,8 +12,6 @@
     </div>
   </div>
 </div>
-
-<div style="height:1px; background-color: #e1e4e8; margin-top: 20px; margin-bottom: 20px;"></div>
 
 <h2>Organización 3er cuatrimestre 2023</h2>
 
@@ -27,8 +24,8 @@
 |   5    | [@AgusAdTello](https://github.com/AgusAdTello) | [Proyecto 409](https://github.com/orgs/CodeSystem2022/projects/409)|
 |   6    | [@NazarenoTello](https://github.com/nazarenotello) |    [Proyecto 434](https://github.com/orgs/CodeSystem2022/projects/434)     |
 |   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    [Proyecto 461](https://github.com/orgs/CodeSystem2022/projects/461)     |
-|   8    | [@Macelluna](https://github.com/Macelluna) |    -     |
-|   9    | Nombre alumno |    -     |
+|   8    | [@Macelluna](https://github.com/Macelluna) |   [Proyecto 721](https://github.com/orgs/CodeSystem2022/projects/721)     |
+|   9    | [@FrancoFB](https://github.com/FrancoFB) |    -     |
 |  10    | Nombre alumno |    -     |
 |  11    | [Proyecto Integrador Python](https://github.com/CodeSystem2022/HELLFISH_3er/tree/main/Proyecto%20Python) |    [Proyecto 693](https://github.com/orgs/CodeSystem2022/projects/693)     |
 

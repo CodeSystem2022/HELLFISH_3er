@@ -2,7 +2,8 @@
 
 class Persona { //Clase padre
     
-    static contadorObjetosPersona = 0;
+    static contadorObjetosPersona = 0; //Atributo estatico
+    email = 'Valor default email'; // Atributo NO estatico
     
     constructor(nombre, apellido) {
         this._nombre = nombre;
@@ -100,3 +101,9 @@ Empleado.saludar2(empleado1);
 //console.log(persona1.contadorObjetosPersona);
 console.log(Persona.contadorObjetosPersona);
 console.log(Empleado.contadorObjetosPersona);
+
+//Atributo estatico vs No estatico
+//Atributo estatico se asocia a la Clase y en cuanto al Atributo NO estatico se asocia a los objetos
+console.log(persona1.email); Valor default email //accedemos desde el objeto persona1 de la clase padre al atributo NO estatico
+console.log(empleado1.email); Valor default email //accedemos desde el objeto empleado1 de la clase hija al atributo NO estatico
+//console.log(Persona.email); undefined  Se demuestra que no se puede acceder al atributo NO estatico desde la clase debido a que es un objeto estatico, sino que esta creando una nueva variable

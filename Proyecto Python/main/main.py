@@ -1,5 +1,6 @@
 from calculadora.Calculadora import sumar, restar, multiplicar, dividir
 from calculadora.Calculadora import potencia, raiz, logaritmo
+from calculadora.FunCuad import funCuad
 
 
 def menuPrincipal():
@@ -34,6 +35,114 @@ def menuCalculadora():
     print("4- División")
     print("5- Calculadora Científica")
     print("6- Volver")
+    print("7- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 7):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-7)")
+
+    match opcion:
+
+        case 1:  # Suma
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(sumar(n1, n2))
+            menuCalculadora()
+
+        case 2:  # Resta
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(restar(n1, n2))
+            menuCalculadora()
+
+        case 3:  # Multiplicación
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(multiplicar(n1, n2))
+            menuCalculadora()
+
+        case 4:  # División
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    if n2 == 0:
+                        raise Exception()
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números (excepto el cero)")
+
+            input(dividir(n1, n2))
+            menuCalculadora()
+
+        case 5:
+            menuCientifica()
+
+        case 6:
+            menuPrincipal()
+
+        case 7:
+            return
+
+
+def menuCientifica():
+    print("\n*** Calculadora ***")
+    print("*** Científica ****\n")
+    print("1- Potencia")
+    print("2- Raíz Cuadrada")
+    print("3- Logaritmo Natural")
+    print("4- Función Cuadrática")
+    print("5- Volver")
+    print("6- Salir")
 
     opcion = 0
     while (opcion < 1 or opcion > 6):
@@ -46,154 +155,137 @@ def menuCalculadora():
 
     match opcion:
 
-        case 1:  # Suma
-
-            while (not isinstance(n1, int)):
-                try:
-                    n1 = int(input("Ingrese primer número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            while (not isinstance(n2, int)):
-                try:
-                    n2 = int(input("Ingrese segundo número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            print(sumar(n1, n2))
-            menuCalculadora()
-
-        case 2:  # Resta
-
-            while (not isinstance(n1, int)):
-                try:
-                    n1 = int(input("Ingrese primer número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            while (not isinstance(n2, int)):
-                try:
-                    n2 = int(input("Ingrese segundo número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            print(restar(n1, n2))
-            menuCalculadora()
-
-        case 3:  # Multiplicación
-
-            while (not isinstance(n1, int)):
-                try:
-                    n1 = int(input("Ingrese primer número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            while (not isinstance(n2, int)):
-                try:
-                    n2 = int(input("Ingrese segundo número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            print(multiplicar(n1, n2))
-            menuCalculadora()
-
-        case 4:  # División
-
-            while (not isinstance(n1, int)):
-                try:
-                    n1 = int(input("Ingrese primer número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            while (not isinstance(n2, int)):
-                try:
-                    n2 = int(input("Ingrese segundo número: "))
-                except Exception:
-                    print("Por favor, solo ingrese números")
-
-            print(dividir(n1, n2))
-            menuCalculadora()
-
-        case 5:
-            menuCientifica()
-
-        case 6:
-            menuPrincipal()
-
-
-def menuCientifica():
-    print("\n*** Calculadora ***")
-    print("*** Científica ****\n")
-    print("1- Potencia")
-    print("2- Raíz Cuadrada")
-    print("3- Logaritmo Natural")
-    print("4- Función Cuadrática")
-    print("5- Volver")
-
-    opcion = 0
-    while (opcion < 1 or opcion > 5):
-        try:
-            opcion = int(input("\nIngrese una opción: "))
-        except Exception:
-            print("\nIngrese una opción válida (1-5)")
-
-    n1 = n2 = "a"
-
-    match opcion:
-
         case 1:  # Potencia
 
-            while (not isinstance(n1, int)):
+            while True:
                 try:
-                    n1 = int(input("Ingrese primer número: "))
+                    n1 = float(input("Ingrese primer número: "))
+                    break
                 except Exception:
                     print("Por favor, solo ingrese números")
 
-            while (not isinstance(n2, int)):
+            while True:
                 try:
-                    n2 = int(input("Ingrese segundo número: "))
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
                 except Exception:
                     print("Por favor, solo ingrese números")
 
-            print(potencia(n1, n2))
+            input(potencia(n1, n2))
             menuCientifica()
 
         case 2:  # Raíz Cuadrada
 
-            while (not isinstance(n1, int)):
+            while True:
                 try:
-                    n1 = int(input("Ingrese primer número: "))
+                    n1 = float(input("Ingrese primer número: "))
+                    if n1 <= 0:
+                        raise Exception()
+                    break
                 except Exception:
-                    print("Por favor, solo ingrese números")
+                    print("Por favor, solo ingrese números positivos")
 
-            print(raiz(n1))
+            input(raiz(n1))
             menuCientifica()
 
         case 3:  # Logaritmo Natural
 
-            while (not isinstance(n1, int)):
+            while True:
                 try:
-                    n1 = int(input("Ingrese primer número: "))
+                    n1 = float(input("Ingrese primer número: "))
+                    if n1 <= 0:
+                        raise Exception()
+                    break
                 except Exception:
                     print("Por favor, solo ingrese números")
 
-            print(logaritmo(n1))
+            input(logaritmo(n1))
             menuCientifica()
 
         case 4:  # Función Cuadrática
-            menuFunCuad()
+            cargarFC()
 
         case 5:  # Volver
             menuCalculadora()
 
+        case 6:  # Salir
+            return
 
-def menuFunCuad():
-    pass
+
+def cargarFC():
+    print("\nPara una funcón del tipo:")
+    print("\ta * x^2 + b * x + c")
+    print("Ingrese los siguientes valores")
+
+    while True:
+        try:
+            n1 = float(input("a = "))
+            break
+        except Exception:
+            print("Por favor, solo ingrese números")
+
+    while True:
+        try:
+            n2 = float(input("b = "))
+            break
+        except Exception:
+            print("Por favor, solo ingrese números")
+
+    while True:
+        try:
+            n3 = float(input("c = "))
+            break
+        except Exception:
+            print("Por favor, solo ingrese números")
+
+    datosFC = funCuad(n1, n2, n3)
+    menuFunCuad(datosFC)
+
+
+def menuFunCuad(datos=None):
+    print("\n***** Función *****")
+    print("**** Cuadrática ***\n")
+    print("1- Vertice")
+    print("2- Raices Reales")
+    print("3- Ordenada al origen")
+    print("4- Forma de la parábola")
+    print("5- Volver")
+    print("6- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 6):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-6)")
+
+    match opcion:
+        case 1:  # Vertice
+            input(datos.vertice())
+            menuFunCuad(datos)
+
+        case 2:  # Raices Reales
+            input(datos.raices())
+            menuFunCuad(datos)
+
+        case 3:  # Ordenada al Origen
+            input(datos.ordenada())
+            menuFunCuad(datos)
+
+        case 4:  # Forma
+            input(datos.forma())
+            menuFunCuad(datos)
+
+        case 5:  # Volver
+            menuCientifica()
+
+        case 6:  # Salir
+            return
 
 
 def menuInventario():
-    n2 = int(input("Presione alt + f4 para continuar"))
-    return n2
+    input("Presione alt + f4 para continuar")
+    return
 
 
 if __name__ == "__main__":

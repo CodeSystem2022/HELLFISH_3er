@@ -12,20 +12,20 @@ class funCuad:
         vx = (-self.b)/(2*self.a)
         vx2 = vx**2
         vy = self.a * vx2 + self.b*vx + self.c
-        msg = f"vertice en: ({vy}, {vx})"
+        msg = f"Vertice en: ({vy}, {vx})"
         return msg
 
     def raices(self):
-        dis = sqrt(self.b ** 2 - 4 * self.a * self.c)
+        dis = self.b ** 2 - 4 * self.a * self.c
         if dis == 0.0:
             x = -self.b/(2 * self.a)
-            msg = f"raiz única en x = {x}"
+            msg = f"Raiz única en x = {x}"
         elif dis > 0.0:
             x1 = (-self.b + sqrt(dis)) / 2 * self.a
             x2 = (+self.b + sqrt(dis)) / 2 * self.a
-            msg = f"raices en x = {x1}, y en x = {x2}"
+            msg = f"Raices en x = {x1}, y en x = {x2}"
         else:
-            msg = "raices imaginarias"
+            msg = "Raices imaginarias"
         return msg
 
     def ordenada(self):

@@ -25,9 +25,6 @@ public class TestExcepciones {
 
 Agrego ejercicio Java 8.3 
 
-    Java:
-
-
 package test;
 
 import static aritmetica.Aritmetica.division;
@@ -49,5 +46,7 @@ public class TestExcepciones {
         finally{
             System.out.println("Se reviso la division entre cero");
         }
-        System.…
+        System.out.println("La variable de resultado tiene como valor: "+resultado);
+    }
+}
 

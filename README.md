@@ -25,8 +25,8 @@
 |   6    | [@NazarenoTello](https://github.com/nazarenotello) |    [Proyecto 434](https://github.com/orgs/CodeSystem2022/projects/434)     |
 |   7    | [@RamiroArielTello](https://github.com/RamiroArielTello) |    [Proyecto 461](https://github.com/orgs/CodeSystem2022/projects/461)     |
 |   8    | [@Macelluna](https://github.com/Macelluna) |   [Proyecto 721](https://github.com/orgs/CodeSystem2022/projects/721)     |
-|   9    | [@FrancoFB](https://github.com/FrancoFB) |    [Proyecto 420](https://github.com/orgs/CodeSystem2022/projects/823)     |
-|  10    | [@elfabri](https://github.com/elfabri) |    [Proyecto 1](https://github.com/orgs/CodeSystem2022/projects/177)     |
+|   9    | [@FrancoFB](https://github.com/FrancoFB) |    [Proyecto 823](https://github.com/orgs/CodeSystem2022/projects/823)     |
+|  10    | [@elfabri](https://github.com/elfabri) |    [Proyecto 853](https://github.com/orgs/CodeSystem2022/projects/853)     |
 |  11    | Nombre alumno |    -     |
 |  11    | [Proyecto Integrador Python](https://github.com/CodeSystem2022/HELLFISH_3er/tree/main/Proyecto%20Python) |    [Proyecto 693](https://github.com/orgs/CodeSystem2022/projects/693)     |
 

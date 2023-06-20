@@ -1,3 +1,37 @@
+class Producto{
+    static ContadorProductos = 0;
+    constructor(nombre, precio){
+        this._idProducto = ++Producto.ContadorProductos;
+        this._nombre = nombre;
+        this._precio = precio;
+    }
+
+    get idProducto(){
+        return this._idProducto;
+    }
+
+    get nombre(){
+        return this._nombre;
+    }
+
+    set nombre(){
+        this._nombre = nombre;
+    }
+
+    get precio(){
+        return this._precio;
+    }
+
+    set precio(precio){
+        this._precio = precio;
+    }
+
+    toString(){ //Template Literals: Nos permite insertar código dinamicamente
+        return 'idProducto : ${this._idProducto}, nombre: ${this._nombre}, precio: ${this._precio}';
+    }
+}
+//Fin de la clase producto
+
 class Orden {
     static contOrdenes = 0
     static MAX_PRODUCTOS = 5;

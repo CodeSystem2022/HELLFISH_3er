@@ -3,3 +3,5 @@
 08:43:30 PM: WARNING [logger_base.py:18] Mensaje a nivel warning
 08:43:30 PM: ERROR [logger_base.py:19] Mensaje a nivel error
 08:43:30 PM: CRITICAL [logger_base.py:20] Mensaje a nivel critical
+11:04:58 PM: ERROR [Conexion.py:25] Ocurrio un errror: 
+11:06:27 PM: ERROR [Conexion.py:25] Ocurrio un errror: 

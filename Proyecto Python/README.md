@@ -1,6 +1,8 @@
 <h1 align="center">🐟🔥 HELLFISH 🔥🐟<br>Proyecto del 3er cuatrimestre<br><br><img width="100%" src="https://github.com/ludmilailen/HellfishGif/blob/main/Hellfish_intro.gif"> </h1>
 
-## Integrantes:
+### Proyecto anterior:  [Java Proyecto Hellfish](https://github.com/CodeSystem2022/Java_Proyecto_Hellfish)
+
+### Integrantes:
 <ul>
   <li><a href="https://github.com/aniascua" target="_blank">Ascua Ana</a></li>
   <li><a href="https://github.com/FrancoFB" target="_blank">Blanco Franco</a></li>

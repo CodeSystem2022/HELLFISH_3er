@@ -54,7 +54,11 @@ public class ListadoPersonasApp {
 
                 // método de referencia
                 personas.forEach(System.out::println);;
-            }
+            } case 3 -> { // Salir del ciclo
+                System.out.println("Hasta pronto");
+                salir = true;
+            } default -> System.out.println("Opción incorrecta: " + opcion);
         }
+        return salir;
     }
 }

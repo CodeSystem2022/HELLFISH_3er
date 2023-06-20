@@ -1,6 +1,6 @@
 
 from capa_datos_personas.Persona import Persona
-from capa_datos_personas.Persona import Conexion
+from capa_datos_personas.Conexion import Conexion
 from logger_base import log
 
 class PersonaDAO:
@@ -29,11 +29,27 @@ class PersonaDAO:
             log.debug(f'Persona Insertada: {Persona}')
             return cursor.rowcount
 
+
+    @classmethod
+    def actualizar(cls, persona):
+        with Conexion.obtenerConexion():
+            with Conexion.obtenerCursor() as cursor:
+                valores = (persona.nombre, persona.apellido, persona.email, persona.id_persona)
+                cursor.execute(cls._ACTUALIZAR, valores)
+                log.debug(f'Persona Actualizada: {persona} ')
+                return cursor.rowcount
+
+
 if __name__ == '__main__':
+    persona1 = Persona(1, 'Juan Jose', 'Pena', 'Jjpena@gmail.com')
+    personas_actualizadas = PersonaDAO.actualizar(persona1)
+    log.debug(f'Personas actualizadas:{personas_actualizadas}')
+
+
     # Insertar un registro
-    persona1 = Persona(nombre= 'Mati', apellido= 'Ivan', email='matiborda@gmail.com')
-    personas_insertadas = PersonaDAO.insertar(persona1)
-    log.debug(f'Personas Insertadas {personas_insertadas}')
+    # persona1 = Persona(nombre= 'Mati', apellido= 'Ivan', email='matiborda@gmail.com')
+    # personas_insertadas = PersonaDAO.insertar(persona1)
+    # log.debug(f'Personas Insertadas {personas_insertadas}')
 
     personas = PersonaDAO.seleccionar()
     for persona in personas:

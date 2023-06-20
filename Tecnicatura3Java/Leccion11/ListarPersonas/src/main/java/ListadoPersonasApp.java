@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+
+public class ListadoPersonasApp {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        List<Persona> personas = new ArrayList<>();
+
+        // Menu
+        var salir = false;
+        while (!salir) {
+            mostrarMenu();
+        }
+    }
+}

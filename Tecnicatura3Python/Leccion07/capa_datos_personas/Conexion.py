@@ -1,3 +1,5 @@
+import logging
+
 from psycopg2 import pool
 #from logger_base import log
 import sys
@@ -14,7 +16,9 @@ class Conexion:
 
     @classmethod
     def obtenerConexion(cls):
-        pass
+        conexion = cls.obtenerPool()
+        log.debug (f'Conecion obtenida del pool: {conexion}')
+        return conexion
 
     @classmethod
     def  obtenerCursor(cls):
@@ -24,7 +28,18 @@ class Conexion:
     def obtenerPool(cls):
         if cls._pool is None:
             try:
-                cls._pool = pool.SimpleConnectionPool()
+                cls._pool = pool.SimpleConnectionPool(cls._MAX_CON,
+                                                      cls._MAX_CON,
+                                                      host=cls._HOST,
+                                                      user=cls._USERNAME,
+                                                      port=cls._DB_PORT,
+                                                      database=cls._DATABASE)
+                log.debug(f'creacion del pool exitosa: {cls._pool}')
+            except Exception as e:
+                log.error(f'Ocurrio un error al obtener el pool:{e}')
+                sys.exit()
+        else:
+            return cls._pool
 
 
 if __name__ == '__main__':

@@ -1,12 +1,12 @@
 import logging
 
 from psycopg2 import pool
-#from logger_base import log
+from logger_base import log
 import sys
 
 class Conexion:
     _DATABASE = 'test_bd'
-    _USERNAME = 'postgre'
+    _USERNAME = 'postgres'
     _PASSWORD = 'admin'
     _DB_PORT = '5432'
     _HOST = '127.0.0.1'
@@ -16,8 +16,8 @@ class Conexion:
 
     @classmethod
     def obtenerConexion(cls):
-        conexion = cls.obtenerPool()
-        log.debug (f'Conecion obtenida del pool: {conexion}')
+        conexion = cls.obtenerPool().getconn()
+        log.debug(f'Conecion obtenida del pool: {conexion}')
         return conexion
 
     @classmethod
@@ -35,6 +35,7 @@ class Conexion:
                                                       port=cls._DB_PORT,
                                                       database=cls._DATABASE)
                 log.debug(f'creacion del pool exitosa: {cls._pool}')
+                return cls._pool
             except Exception as e:
                 log.error(f'Ocurrio un error al obtener el pool:{e}')
                 sys.exit()
@@ -43,5 +44,8 @@ class Conexion:
 
 
 if __name__ == '__main__':
-    Conexion.obtenerConexion()
-    Conexion.obtenerCursor()
+    conexion1 = Conexion.obtenerConexion()
+    conexion2 = Conexion.obtenerConexion()
+    conexion3 = Conexion.obtenerConexion()
+    conexion4 = Conexion.obtenerConexion()
+    conexion5 = Conexion.obtenerConexion()

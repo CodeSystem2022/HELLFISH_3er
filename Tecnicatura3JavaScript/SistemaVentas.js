@@ -33,3 +33,30 @@ class Orden {
     \nTotal de la orden: ${this.calcularTotal()}\n`
     }
 }
+
+// Pruebas con la relación de agregación
+const producto1 = new Producto("Pizza Napolitana", 2200);
+const producto2 = new Producto("Quilmes", 450);
+const producto3 = new Producto("Imperial IPA", 500);
+
+const orden1 = new Orden()
+const orden2 = new Orden()
+const orden3 = new Orden()
+
+orden1.agregarProducto(producto1)
+orden1.agregarProducto(producto3)
+orden1.agregarProducto(producto3)
+orden1.agregarProducto(producto2)
+
+orden2.agregarProducto(producto1)
+orden2.agregarProducto(producto1)
+orden2.agregarProducto(producto3)
+orden2.agregarProducto(producto3)
+orden2.agregarProducto(producto3)
+
+orden3.agregarProducto(producto3)
+orden3.agregarProducto(producto3)
+orden3.agregarProducto(producto2)
+orden3.agregarProducto(producto2)
+orden3.agregarProducto(producto3)
+orden3.agregarProducto(producto1)  // Sexto elemento - no se tiene en cuenta

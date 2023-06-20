@@ -1,4 +1,4 @@
-
+class personaDAO
 from capa_datos_personas.Persona import Persona
 from capa_datos_personas.Persona import Conexion
 from logger_base import log
@@ -20,7 +20,21 @@ _EMILINAR = 'DELETE FROM persona WHERE id_persona=%s '
                     personas.append(persona)
                     return personas
 
+    @classmethod
+    def insertar(cls,Persona):
+     with Conexion.obtenerConexion():
+        with Conexion.obtenerCursor() as cursor:
+            valores = (Persona.nombre, Persona.apellido, Persona.email)
+            cursor.execute(cls._INSERTAR, valores)
+            log.debug(f'Persona Insertada: {Persona}')
+            return cursor.rowcount
+
 if __name__ == '__main__':
+    # Insertar un registro
+    persona1 = Persona(nombre= 'Mati', apellido= 'Ivan', email='matiborda@gmail.com')
+    personas_insertadas = PersonaDAO.insertar(persona1
+    log.debug(f'Personas Insertadas {personas_insertadas}')
+
     personas = PersonaDAO.seleccionar()
     for persona in personas:
         logging.debug(Persona)

@@ -1,31 +1,13 @@
 import java.util.Scanner;
-
 public class CalculadoraUTN {
-
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         while(true){//Ciclo infinito
         System.out.println("****** Aplicación Calculadora ******");
-        // 9.2 Definiendo las variables:
-        //var operando1 = 10;
-        //var operando2 = 20;
-        //var resultado = operando1 + operando2;
-        //System.out.println("resultado = " + resultado);
-        
-        // Mostramos menú
-        System.out.println("""
-            1. Suma
-            2. Resta
-            3. Multiplicación
-            4. División
-            5. Salir
-        """);
-
-        System.out.print("Operación a realizar? ");
+            mostrarMenu();
             try{
-        var ope = Integer.parseInt(entrada.nextLine());
-
-        if (operacion >= 1 && ope <= 4) {
+        var opecion = Integer.parseInt(entrada.nextLine());
+        if (operacion >= 1 && operacion <= 4) {
             System.out.print("Ingrese primer número: ");
             var operando1 = Integer.parseInt(entrada.nextLine());
             System.out.print("Ingrese segundo número: ");
@@ -67,4 +49,15 @@ public class CalculadoraUTN {
         }//fin del catch
         }//Fin while
     }//Fin de la main
+
+    private static void mostrarMenu(){
+        System.out.println("""
+                           1. SUMA
+                           2. RESTA
+                           3. MULTIPLICACION
+                           4. DIVISION
+                           5. SALIR
+                           """);
+        System.out.print("Seleccione una operacion: ");
+    }
 }

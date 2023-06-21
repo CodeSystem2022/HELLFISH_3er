@@ -4,6 +4,7 @@ public class CalculadoraUTN {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        while(true){//Ciclo infinito
         System.out.println("****** Aplicación Calculadora ******");
         // 9.2 Definiendo las variables:
         //var operando1 = 10;
@@ -53,9 +54,12 @@ public class CalculadoraUTN {
         } //Fin del if
         else if (ope == 5) {
             System.out.println("Saliendo del programa");
-            
+            break;//Rompe el ciclo infinito
         } else {
             System.out.println("Opción invalida"+ope);
         }
+            //IMPRIMIMOS UN SALTO DE LINEA
+            System.out.println("");
+        }//Fin while
     }//Fin de la main
 }

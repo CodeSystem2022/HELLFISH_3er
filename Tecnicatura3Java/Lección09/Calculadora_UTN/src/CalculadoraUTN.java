@@ -22,13 +22,14 @@ public class CalculadoraUTN {
         """);
 
         System.out.print("Operación a realizar? ");
+            try{
         var ope = Integer.parseInt(entrada.nextLine());
 
-        if (ope >= 1 && ope <= 4) {
+        if (operacion >= 1 && ope <= 4) {
             System.out.print("Ingrese primer número: ");
-            var ope1 = Integer.parseInt(entrada.nextLine());
+            var operando1 = Integer.parseInt(entrada.nextLine());
             System.out.print("Ingrese segundo número: ");
-            var ope2 = Integer.parseInt(entrada.nextLine());
+            var operando2 = Integer.parseInt(entrada.nextLine());
 
             int resultado;
         
@@ -52,14 +53,18 @@ public class CalculadoraUTN {
         default -> System.out.println("Opcion Erronea: "+ operacion);
     }//Fin switch
         } //Fin del if
-        else if (ope == 5) {
+        else if (operacion == 5) {
             System.out.println("Saliendo del programa");
             break;//Rompe el ciclo infinito
         } else {
-            System.out.println("Opción invalida"+ope);
+            System.out.println("Opción invalida"+operacion);
         }
             //IMPRIMIMOS UN SALTO DE LINEA
             System.out.println("");
+                }catch(Exception e){//Termina el try y comienza el catch
+            System.out.println("Ocurrio un error: "+e.getMessage());
+            System.out.println("");
+        }//fin del catch
         }//Fin while
     }//Fin de la main
 }

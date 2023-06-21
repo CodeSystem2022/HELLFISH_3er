@@ -21,20 +21,41 @@ public class CalculadoraUTN {
         """);
 
         System.out.print("Operación a realizar? ");
-        int ope = Integer.parseInt(entrada.nextLine());
+        var ope = Integer.parseInt(entrada.nextLine());
 
         if (ope >= 1 && ope <= 4) {
             System.out.print("Ingrese primer número: ");
             var ope1 = Integer.parseInt(entrada.nextLine());
-
             System.out.print("Ingrese segundo número: ");
             var ope2 = Integer.parseInt(entrada.nextLine());
-            
-        } else if (ope == 5) {
+
+            int resultado;
+        
+    switch(operacion){
+        case 1 -> { //Suma
+            resultado = operando1 + operando2;
+            System.out.println("Resultado de la suma: "+resultado);
+        }
+        case 2 -> { //Resta
+            resultado = operando1 - operando2;
+            System.out.println("Resultado de la resta: "+resultado);
+        }
+        case 3 -> { //Multiplicacion
+            resultado = operando1 * operando2;
+            System.out.println("Resultado de la multiplicacion: "+resultado);
+        }
+        case 4 -> { //Division
+            resultado = operando1 / operando2;
+            System.out.println("Resultado de la division: "+resultado);
+        }
+        default -> System.out.println("Opcion Erronea: "+ operacion);
+    }//Fin switch
+        } //Fin del if
+        else if (ope == 5) {
             System.out.println("Saliendo del programa");
             
         } else {
-            System.out.println("Opción invalida");
+            System.out.println("Opción invalida"+ope);
         }
-    }
+    }//Fin de la main
 }

@@ -8,32 +8,7 @@ public class CalculadoraUTN {
             try{
         var opecion = Integer.parseInt(entrada.nextLine());
         if (operacion >= 1 && operacion <= 4) {
-            System.out.print("Ingrese primer número: ");
-            var operando1 = Integer.parseInt(entrada.nextLine());
-            System.out.print("Ingrese segundo número: ");
-            var operando2 = Integer.parseInt(entrada.nextLine());
-
-            int resultado;
-        
-    switch(operacion){
-        case 1 -> { //Suma
-            resultado = operando1 + operando2;
-            System.out.println("Resultado de la suma: "+resultado);
-        }
-        case 2 -> { //Resta
-            resultado = operando1 - operando2;
-            System.out.println("Resultado de la resta: "+resultado);
-        }
-        case 3 -> { //Multiplicacion
-            resultado = operando1 * operando2;
-            System.out.println("Resultado de la multiplicacion: "+resultado);
-        }
-        case 4 -> { //Division
-            resultado = operando1 / operando2;
-            System.out.println("Resultado de la division: "+resultado);
-        }
-        default -> System.out.println("Opcion Erronea: "+ operacion);
-    }//Fin switch
+            ejecutarOperacion(operacion, entrada);
         } //Fin del if
         else if (operacion == 5) {
             System.out.println("Saliendo del programa");
@@ -59,5 +34,32 @@ public class CalculadoraUTN {
                            5. SALIR
                            """);
         System.out.print("Seleccione una operacion: ");
-    }
+    }//Fin metodo mostrarMenu
+    private static void ejecutarOperacion(int operacion, Scanner entrada){
+        // 9.3 Ponemos la entrada de información
+        System.out.print("Ingrese el valor para el operando 1: ");
+        var operando1 = Integer.parseInt(entrada.nextLine());
+        System.out.print("Ingrese el valor para el operando 2: ");
+        var operando2 = Integer.parseInt(entrada.nextLine());
+        int resultado;
+    switch(operacion){
+        case 1 -> { //Suma
+            resultado = operando1 + operando2;
+            System.out.println("Resultado de la suma: "+resultado);
+        }
+        case 2 -> { //Resta
+            resultado = operando1 - operando2;
+            System.out.println("Resultado de la resta: "+resultado);
+        }
+        case 3 -> { //Multiplicacion
+            resultado = operando1 * operando2;
+            System.out.println("Resultado de la multiplicacion: "+resultado);
+        }
+        case 4 -> { //Division
+            resultado = operando1 / operando2;
+            System.out.println("Resultado de la division: "+resultado);
+        }
+        default -> System.out.println("Opcion Erronea: "+operacion);
+    }//Fin switch
+    }//Fin metodo ejecutarOperacion
 }

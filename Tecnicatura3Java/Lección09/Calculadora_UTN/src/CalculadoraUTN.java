@@ -10,14 +10,31 @@ public class CalculadoraUTN {
         //var operando2 = 20;
         //var resultado = operando1 + operando2;
         //System.out.println("resultado = " + resultado);
+        
+        // Mostramos menú
+        System.out.println("""
+            1. Suma
+            2. Resta
+            3. Multiplicación
+            4. División
+            5. Salir
+        """);
 
-        // 9.3 Ponemos la entrada de información
-        System.out.println("Ingrese el valor para el operando 1: ");
-        var operando1 = Integer.parseInt(entrada.nextLine());
-        System.out.println("Ingrese el valor para el operando 2: ");
-        var operando2 = Integer.parseInt(entrada.nextLine());
-        // Realizamos la operación de suma en la variable "resultado" y lo mostramos por pantalla
-        var resultado = operando1 + operando2;
-        System.out.println("resultado = " + resultado);
+        System.out.print("Operación a realizar? ");
+        int ope = Integer.parseInt(entrada.nextLine());
+
+        if (ope >= 1 && ope <= 4) {
+            System.out.print("Ingrese primer número: ");
+            var ope1 = Integer.parseInt(entrada.nextLine());
+
+            System.out.print("Ingrese segundo número: ");
+            var ope2 = Integer.parseInt(entrada.nextLine());
+            
+        } else if (ope == 5) {
+            System.out.println("Saliendo del programa");
+            
+        } else {
+            System.out.println("Opción invalida");
+        }
     }
 }

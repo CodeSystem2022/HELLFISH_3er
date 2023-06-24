@@ -284,8 +284,38 @@ def menuFunCuad(datos=None):
 
 
 def menuInventario():
-    input("Presione alt + f4 para continuar")
-    return
+    print("\n*** Inventario ****\n")
+    print("1- Cargar Información")
+    print("2- Ver Resultados")
+    print("3- Volver")
+    print("4- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 4):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-4)")
+
+    match opcion:
+        case 1:  # Ingreso de datos
+            # Verificación previa al envío de datos
+            while True:
+                try:
+                    cant = int(input("¿Cuántos artículos hay en su inventario? "))
+                    if (cant <= 0 or cant > 15):
+                        raise Exception
+                    else:
+                        break
+                except Exception:
+                    print("\nIngrese una cantidad válida (1-15)")
+
+        case 2:  # Mostrar resultados
+            pass
+        case 3:  # Volver al Menú Principal
+            menuPrincipal()
+        case 4:  # Salir
+            return
 
 
 if __name__ == "__main__":

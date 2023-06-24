@@ -314,9 +314,31 @@ def menuInventario():
             # por cada artículo, pedimos nombre, cantidad y precio
             elementos = range(0, cant, 1)
             for i in elementos:
-                nombre = input(f"NOMBRE del artículo {i+1}: ")
-                cantidad = int(input(f"CANTIDAD del artículo {i+1}: "))
-                precio = int(input(f"PRECIO del artículo {i+1}: "))
+                nombre = input(f"\nNOMBRE del artículo {i+1}: ")
+
+                # Verificación cantidad válida
+                while True:
+                    try:
+                        cantidad = int(input(f"\nCANTIDAD del artículo {i+1}: "))
+                        if (cantidad <= 0):
+                            raise Exception
+                        else:
+                            break
+                    except Exception:
+                        print("\nIngrese una cantidad válida")
+
+                # Verificación precio válido
+                while True:
+                    try:
+                        precio = int(input(f"\nPRECIO del artículo {i+1}: "))
+                        if (precio <= 0):
+                            raise Exception
+                        else:
+                            break
+                    except Exception:
+                        print("\nIngrese un precio válido")
+
+                print(f"arti: {nombre}, cantidad: {cantidad}, precio: {precio}")
                 # Inventario.ingresarDatos(nombre, cantidad, precio, cantidad * precio)
 
         case 2:  # Mostrar resultados

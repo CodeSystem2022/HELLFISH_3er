@@ -300,6 +300,7 @@ def menuInventario():
     match opcion:
         case 1:  # Ingreso de datos
             # Verificación previa al envío de datos
+            # cantidad de artículos totales
             while True:
                 try:
                     cant = int(input("¿Cuántos artículos hay en su inventario? "))
@@ -309,6 +310,14 @@ def menuInventario():
                         break
                 except Exception:
                     print("\nIngrese una cantidad válida (1-15)")
+
+            # por cada artículo, pedimos nombre, cantidad y precio
+            elementos = range(0, cant, 1)
+            for i in elementos:
+                nombre = input(f"NOMBRE del artículo {i+1}: ")
+                cantidad = int(input(f"CANTIDAD del artículo {i+1}: "))
+                precio = int(input(f"PRECIO del artículo {i+1}: "))
+                # Inventario.ingresarDatos(nombre, cantidad, precio, cantidad * precio)
 
         case 2:  # Mostrar resultados
             pass

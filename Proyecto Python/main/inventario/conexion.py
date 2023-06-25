@@ -3,6 +3,7 @@ import sys
 
 
 def crear_base_datos():
+    # Creamos base de datos para trabajar
     conn = bd.connect(
             host="127.0.0.1",
             port="5432",
@@ -14,7 +15,6 @@ def crear_base_datos():
     cursor = conn.cursor()
 
     cursor.execute("CREATE DATABASE hellfish3")
-    print("base de datos creada correctamente")
 
     conn.commit()
 
@@ -24,7 +24,6 @@ def crear_base_datos():
 
 def crear_tabla():
     # Creamos tabla en caso de que esta no exista
-
     conn = bd.connect(
             host="127.0.0.1",
             port="5432",
@@ -40,11 +39,11 @@ def crear_tabla():
             id_art SERIAL PRIMARY KEY,
             nombre VARCHAR(100) NOT NULL,
             cantidad INTEGER NOT NULL,
-            precio NUMERIC(10, 2) NOT NULL
+            precio NUMERIC(10, 2) NOT NULL,
+            cantpre NUMERIC(10, 2) NOT NULL
         );
     '''
     cursor.execute(create_table_query)
-    print("tabla creada correctamente")
 
     conn.commit()
     cursor.close()
@@ -76,7 +75,6 @@ class Conexion:
                 # verificamos que la tabla de esa base esté creada
                 crear_tabla()
 
-                print(f"Conexión exitosa: {cls._conexion}")
                 return cls._conexion
 
             except Exception as e:
@@ -101,7 +99,6 @@ class Conexion:
                         database=cls._DATABASE,
                         )
 
-                print(f"Conexión exitosa: {cls._conexion}")
                 return cls._conexion
 
             except Exception as e:

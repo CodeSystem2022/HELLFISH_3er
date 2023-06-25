@@ -1,6 +1,8 @@
 from calculadora.Calculadora import sumar, restar, multiplicar, dividir
 from calculadora.Calculadora import potencia, raiz, logaritmo
 from calculadora.FunCuad import funCuad
+from inventario.Inventario import Inventario
+import sys
 
 
 def menuPrincipal():
@@ -131,7 +133,7 @@ def menuCalculadora():
             menuPrincipal()
 
         case 7:
-            return
+            sys.exit()
 
 
 def menuCientifica():
@@ -209,7 +211,7 @@ def menuCientifica():
             menuCalculadora()
 
         case 6:  # Salir
-            return
+            sys.exit()
 
 
 def cargarFC():
@@ -280,18 +282,17 @@ def menuFunCuad(datos=None):
             menuCientifica()
 
         case 6:  # Salir
-            return
+            sys.exit()
 
 
 def menuInventario():
-    print("\n*** Inventario ****\n")
-    print("1- Cargar Información")
-    print("2- Ver Resultados")
-    print("3- Volver")
-    print("4- Salir")
-
     opcion = 0
     while (opcion < 1 or opcion > 4):
+        print("\n*** Inventario ****\n")
+        print("1- Cargar Información")
+        print("2- Ver Resultados")
+        print("3- Volver")
+        print("4- Salir")
         try:
             opcion = int(input("\nIngrese una opción: "))
         except Exception:
@@ -299,6 +300,25 @@ def menuInventario():
 
     match opcion:
         case 1:  # Ingreso de datos
+            # Verificamos existencia previa de datos
+            hay = Inventario.hayDatos()
+            if hay:
+                print("\n\t¡Se han encontrado datos!")
+                while True:
+                    try:
+                        print("\nPara continuar y sobreescribir los datos, ingrese 1")
+                        print("Para cancelar, ingrese 2")
+                        eleccion = int(input())
+                        if (eleccion != 1 and eleccion != 2):
+                            raise Exception
+                        elif eleccion == 1:
+                            break
+                        elif eleccion == 2:
+                            menuInventario()
+                    except Exception:
+                        print("\nIngrese una opción válida (1-2)")
+            # Borramos datos anteriores
+            Inventario.borrarDatos()
             # Verificación previa al envío de datos
             # cantidad de artículos totales
             while True:
@@ -319,7 +339,7 @@ def menuInventario():
                 # Verificación cantidad válida
                 while True:
                     try:
-                        cantidad = int(input(f"\nCANTIDAD del artículo {i+1}: "))
+                        cantidad = int(input(f"\n\tCANTIDAD del artículo {i+1}: "))
                         if (cantidad <= 0):
                             raise Exception
                         else:
@@ -330,7 +350,7 @@ def menuInventario():
                 # Verificación precio válido
                 while True:
                     try:
-                        precio = int(input(f"\nPRECIO del artículo {i+1}: "))
+                        precio = int(input(f"\n\tPRECIO del artículo {i+1}: "))
                         if (precio <= 0):
                             raise Exception
                         else:
@@ -338,15 +358,22 @@ def menuInventario():
                     except Exception:
                         print("\nIngrese un precio válido")
 
-                print(f"arti: {nombre}, cantidad: {cantidad}, precio: {precio}")
-                # Inventario.ingresarDatos(nombre, cantidad, precio, cantidad * precio)
+                # Cargamos datos
+                Inventario.insertarDatos(nombre, cantidad, precio, cantidad*precio)
+            Inventario.mostrarDatos()
+            input("Presione enter para volver al menú de inventario")
+            menuInventario()
 
         case 2:  # Mostrar resultados
-            pass
+            Inventario.mostrarDatos()
+            input("Presione enter para volver al menú de inventario")
+            menuInventario()
+
         case 3:  # Volver al Menú Principal
             menuPrincipal()
+
         case 4:  # Salir
-            return
+            sys.exit()
 
 
 if __name__ == "__main__":

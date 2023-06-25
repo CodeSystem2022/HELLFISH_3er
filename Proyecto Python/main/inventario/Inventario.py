@@ -1,4 +1,4 @@
-from conexion import Conexion
+from inventario.conexion import Conexion
 
 
 class Inventario:
@@ -54,10 +54,10 @@ class Inventario:
                 cls._conexion.commit()
 
                 cursor.close()
-                print("Datos borrados")
+                # print("Datos borrados")
 
-            else:
-                print("No hay datos para borrar")
+            # else:
+                # print("No hay datos para borrar")
 
         except Exception as e:
             print(f"Error al borrar datos: {e}")
@@ -74,10 +74,13 @@ class Inventario:
                 cursor.execute(cls._SELECCIONAR)
                 rows = cursor.fetchall()
 
-                print("Carrito de compras:")
+                total = 0
+                print("\nArtículos en inventario:")
                 for row in rows:
+                    total += row[4]
                     print(f"\t - Producto: {row[1]}, Cantidad: {row[2]}, Precio: {row[3]}, SubTotal: {row[4]}")
 
+                print(f"\n\t\t - Total: {total}\n")
                 cursor.close()
 
             else:

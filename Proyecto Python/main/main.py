@@ -284,8 +284,69 @@ def menuFunCuad(datos=None):
 
 
 def menuInventario():
-    input("Presione alt + f4 para continuar")
-    return
+    print("\n*** Inventario ****\n")
+    print("1- Cargar Información")
+    print("2- Ver Resultados")
+    print("3- Volver")
+    print("4- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 4):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-4)")
+
+    match opcion:
+        case 1:  # Ingreso de datos
+            # Verificación previa al envío de datos
+            # cantidad de artículos totales
+            while True:
+                try:
+                    cant = int(input("¿Cuántos artículos hay en su inventario? "))
+                    if (cant <= 0 or cant > 15):
+                        raise Exception
+                    else:
+                        break
+                except Exception:
+                    print("\nIngrese una cantidad válida (1-15)")
+
+            # por cada artículo, pedimos nombre, cantidad y precio
+            elementos = range(0, cant, 1)
+            for i in elementos:
+                nombre = input(f"\nNOMBRE del artículo {i+1}: ")
+
+                # Verificación cantidad válida
+                while True:
+                    try:
+                        cantidad = int(input(f"\nCANTIDAD del artículo {i+1}: "))
+                        if (cantidad <= 0):
+                            raise Exception
+                        else:
+                            break
+                    except Exception:
+                        print("\nIngrese una cantidad válida")
+
+                # Verificación precio válido
+                while True:
+                    try:
+                        precio = int(input(f"\nPRECIO del artículo {i+1}: "))
+                        if (precio <= 0):
+                            raise Exception
+                        else:
+                            break
+                    except Exception:
+                        print("\nIngrese un precio válido")
+
+                print(f"arti: {nombre}, cantidad: {cantidad}, precio: {precio}")
+                # Inventario.ingresarDatos(nombre, cantidad, precio, cantidad * precio)
+
+        case 2:  # Mostrar resultados
+            pass
+        case 3:  # Volver al Menú Principal
+            menuPrincipal()
+        case 4:  # Salir
+            return
 
 
 if __name__ == "__main__":

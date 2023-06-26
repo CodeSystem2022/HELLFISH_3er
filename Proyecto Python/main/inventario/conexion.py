@@ -3,6 +3,7 @@ import sys
 
 
 def crear_base_datos():
+    # Creamos base de datos para trabajar
     conn = bd.connect(
             host="127.0.0.1",
             port="5432",
@@ -14,7 +15,8 @@ def crear_base_datos():
     cursor = conn.cursor()
 
     cursor.execute("CREATE DATABASE hellfish3")
-    print("base de datos creada correctamente")
+
+    conn.commit()
 
     cursor.close()
     conn.close()
@@ -22,7 +24,6 @@ def crear_base_datos():
 
 def crear_tabla():
     # Creamos tabla en caso de que esta no exista
-
     conn = bd.connect(
             host="127.0.0.1",
             port="5432",
@@ -31,12 +32,20 @@ def crear_tabla():
             database="hellfish3"
             )
 
-    conn.autocommit = True
     cursor = conn.cursor()
 
-    cursor.execute("CREATE TABLE IF NOT EXISTS hellfish3 (id_art VARCHAR(255), nombre VARCHAR(255), cantidad VARCHAR(255), precio VARCHAR(255));")
-    print("tabla creada correctamente")
+    create_table_query = '''
+        CREATE TABLE IF NOT EXISTS carrito (
+            id_art SERIAL PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            cantidad INTEGER NOT NULL,
+            precio NUMERIC(10, 2) NOT NULL,
+            cantpre NUMERIC(10, 2) NOT NULL
+        );
+    '''
+    cursor.execute(create_table_query)
 
+    conn.commit()
     cursor.close()
     conn.close()
 
@@ -52,6 +61,7 @@ class Conexion:
 
     @classmethod
     def obtenerConexion(cls):
+        # Devuelve una conexión con la base de datos hellfish3
         if cls._conexion is None:
             try:
                 cls._conexion = bd.connect(
@@ -61,16 +71,26 @@ class Conexion:
                         password=cls._PASSWORD,
                         database=cls._DATABASE,
                         )
-                print(f"Conexión exitosa: {cls._conexion}")
+
+                # verificamos que la tabla de esa base esté creada
+                crear_tabla()
+
                 return cls._conexion
 
             except Exception as e:
-                print(f"Conexión Error: {e}")
+                print(f"Error de Conexión: {e}")
+                # La primera ejecución, es probable que la base de datos hellfish3
+                # no exista, entonces la creamos
+                # lo hacemos en este orden para evitar el error
+                # de crear la misma base dos veces
             try:
-                print("Intentando otra cosa...")
-
+                print("Creando base de datos")
                 crear_base_datos()
 
+                # verificamos que la tabla de esa base esté creada
+                crear_tabla()
+
+                # Intentamos conectar con la base de datos ya creada
                 cls._conexion = bd.connect(
                         host=cls._HOST,
                         port=cls._DB_PORT,
@@ -79,15 +99,17 @@ class Conexion:
                         database=cls._DATABASE,
                         )
 
-                print(f"Conexión exitosa: {cls._conexion}")
                 return cls._conexion
+
             except Exception as e:
-                print(f"Conexión Error: {e}")
+                print(f"Error de Conexión: {e}")
+                sys.exit()
         else:
             return cls._conexion
 
     @classmethod
     def obtenerCursor(cls):
+        # Solo para pruebas
         if cls._cursor is None:
             try:
                 cls._cursor = cls.obtenerConexion().cursor()
@@ -100,8 +122,8 @@ class Conexion:
             return cls._cursor
 
 
+# Pruebas
 if (__name__ == "__main__"):
 
     Conexion.obtenerConexion()
     Conexion.obtenerCursor()
-    crear_tabla()

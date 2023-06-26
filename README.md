@@ -27,7 +27,7 @@
 |   8    | [@Macelluna](https://github.com/Macelluna) |   [Proyecto 721](https://github.com/orgs/CodeSystem2022/projects/721)     |
 |   9    | [@FrancoFB](https://github.com/FrancoFB) |    [Proyecto 823](https://github.com/orgs/CodeSystem2022/projects/823)     |
 |  10    | [@elfabri](https://github.com/elfabri) |    [Proyecto 853](https://github.com/orgs/CodeSystem2022/projects/853)     |
-|  11    | Nombre alumno |    -     |
+|  11    | [@ludmilailen](https://github.com/ludmilailen) |    [Proyecto 956] (https://github.com/orgs/CodeSystem2022/projects/956/views/1?layout=board)    |
 |  11    | [Proyecto Integrador Python](https://github.com/CodeSystem2022/HELLFISH_3er/tree/main/Proyecto%20Python) |    [Proyecto 693](https://github.com/orgs/CodeSystem2022/projects/693)     |
 
 # Metodología de trabajo SCRUM

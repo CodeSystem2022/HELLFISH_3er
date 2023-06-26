@@ -44,21 +44,91 @@ def menuCalculadora():
         except Exception:
             print("\nIngrese una opción válida (1-7)")
 
-def menuCientifica():
-    print("\n*** Calculadora ***")
-    print("*** Científica ****\n")
-    print("1- Potencia")
-    print("2- Raíz Cuadrada")
-    print("3- Logaritmo Natural")
-    print("4- Función Cuadrática")
-    print("5- Volver")
-    print("6- Salir")
+    match opcion:
 
-    opcion = 0
-    while (opcion < 1 or opcion > 6):
-        try:
-            opcion = int(input("\nIngrese una opción: "))
-        except Exception:
-            print("\nIngrese una opción válida (1-6)")
+        case 1:  # Suma
 
-    n1 = n2 = "a"
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(sumar(n1, n2))
+            menuCalculadora()
+
+        case 2:  # Resta
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(restar(n1, n2))
+            menuCalculadora()
+
+        case 3:  # Multiplicación
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(multiplicar(n1, n2))
+            menuCalculadora()
+
+        case 4:  # División
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    if n2 == 0:
+                        raise Exception()
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números (excepto el cero)")
+
+            input(dividir(n1, n2))
+            menuCalculadora()
+
+        case 5:
+            menuCientifica()
+
+        case 6:
+            menuPrincipal()
+
+        case 7:
+            sys.exit()

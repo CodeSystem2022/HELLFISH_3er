@@ -26,3 +26,4 @@ def menuPrincipal():
             menuInventario()
         case 3:
             sys.exit()
+

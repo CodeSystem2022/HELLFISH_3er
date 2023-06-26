@@ -132,3 +132,80 @@ def menuCalculadora():
 
         case 7:
             sys.exit()
+
+def menuCientifica():
+    print("\n*** Calculadora ***")
+    print("*** Científica ****\n")
+    print("1- Potencia")
+    print("2- Raíz Cuadrada")
+    print("3- Logaritmo Natural")
+    print("4- Función Cuadrática")
+    print("5- Volver")
+    print("6- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 6):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-6)")
+
+    n1 = n2 = "a"
+
+    match opcion:
+
+        case 1:  # Potencia
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            while True:
+                try:
+                    n2 = float(input("Ingrese segundo número: "))
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(potencia(n1, n2))
+            menuCientifica()
+
+        case 2:  # Raíz Cuadrada
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    if n1 <= 0:
+                        raise Exception()
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números positivos")
+
+            input(raiz(n1))
+            menuCientifica()
+
+        case 3:  # Logaritmo Natural
+
+            while True:
+                try:
+                    n1 = float(input("Ingrese primer número: "))
+                    if n1 <= 0:
+                        raise Exception()
+                    break
+                except Exception:
+                    print("Por favor, solo ingrese números")
+
+            input(logaritmo(n1))
+            menuCientifica()
+
+        case 4:  # Función Cuadrática
+            cargarFC()
+
+        case 5:  # Volver
+            menuCalculadora()
+
+        case 6:  # Salir
+            sys.exit()

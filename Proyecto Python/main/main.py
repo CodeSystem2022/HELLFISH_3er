@@ -27,3 +27,20 @@ def menuPrincipal():
         case 3:
             sys.exit()
 
+def menuCalculadora():
+    print("\n*** Calculadora ***\n")
+    print("1- Suma")
+    print("2- Resta")
+    print("3- Multiplicación")
+    print("4- División")
+    print("5- Calculadora Científica")
+    print("6- Volver")
+    print("7- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 7):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-7)")
+

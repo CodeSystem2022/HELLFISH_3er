@@ -44,3 +44,21 @@ def menuCalculadora():
         except Exception:
             print("\nIngrese una opción válida (1-7)")
 
+def menuCientifica():
+    print("\n*** Calculadora ***")
+    print("*** Científica ****\n")
+    print("1- Potencia")
+    print("2- Raíz Cuadrada")
+    print("3- Logaritmo Natural")
+    print("4- Función Cuadrática")
+    print("5- Volver")
+    print("6- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 6):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-6)")
+
+    n1 = n2 = "a"

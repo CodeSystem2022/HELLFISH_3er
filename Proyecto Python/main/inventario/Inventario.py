@@ -25,4 +25,20 @@ class Inventario:
         rows = cursor.fetchall()
         cursor.close()
         return True if rows else False
-        
+
+ @classmethod
+    def insertarDatos(cls, nombre, cantidad, precio, cantpre):
+        # Creamos cursor con el que insertaremos datos en la tabla de la bd
+        # Los datos que llegan deben estar previamente verificados
+        # cantpre = cantidad * precio
+        try:
+            cursor = cls._conexion.cursor()
+
+            cursor.execute(cls._INSERTAR, (nombre, cantidad, precio, cantpre))
+
+            cls._conexion.commit()
+            cursor.close()
+
+        except Exception as e:
+            print(f"Error al ingresar datos: {e}")
+

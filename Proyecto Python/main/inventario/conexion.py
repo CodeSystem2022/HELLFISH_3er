@@ -48,3 +48,14 @@ def crear_tabla():
     conn.commit()
     cursor.close()
     conn.close()
+
+
+class Conexion:
+    _DATABASE = "hellfish3"
+    _USERNAME = "postgres"
+    _PASSWORD = "admin"
+    _HOST = "127.0.0.1"
+    _DB_PORT = "5432"
+    _conexion = None
+    _cursor = None
+

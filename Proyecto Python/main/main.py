@@ -4,6 +4,7 @@ from calculadora.FunCuad import funCuad
 from inventario.Inventario import Inventario
 import sys
 
+
 def menuPrincipal():
     print("\n********************")
     print("***** HELLFISH *****")
@@ -26,6 +27,7 @@ def menuPrincipal():
             menuInventario()
         case 3:
             sys.exit()
+
 
 def menuCalculadora():
     print("\n*** Calculadora ***\n")
@@ -133,6 +135,7 @@ def menuCalculadora():
         case 7:
             sys.exit()
 
+
 def menuCientifica():
     print("\n*** Calculadora ***")
     print("*** Científica ****\n")
@@ -209,3 +212,76 @@ def menuCientifica():
 
         case 6:  # Salir
             sys.exit()
+
+
+def cargarFC():
+    print("\nPara una funcón del tipo:")
+    print("\ta * x^2 + b * x + c")
+    print("Ingrese los siguientes valores")
+
+    while True:
+        try:
+            n1 = float(input("a = "))
+            break
+        except Exception:
+            print("Por favor, solo ingrese números")
+
+    while True:
+        try:
+            n2 = float(input("b = "))
+            break
+        except Exception:
+            print("Por favor, solo ingrese números")
+
+    while True:
+        try:
+            n3 = float(input("c = "))
+            break
+        except Exception:
+            print("Por favor, solo ingrese números")
+
+    datosFC = funCuad(n1, n2, n3)
+    menuFunCuad(datosFC)
+
+
+def menuFunCuad(datos=None):
+    print("\n***** Función *****")
+    print("**** Cuadrática ***\n")
+    print("1- Vertice")
+    print("2- Raices Reales")
+    print("3- Ordenada al origen")
+    print("4- Forma de la parábola")
+    print("5- Volver")
+    print("6- Salir")
+
+    opcion = 0
+    while (opcion < 1 or opcion > 6):
+        try:
+            opcion = int(input("\nIngrese una opción: "))
+        except Exception:
+            print("\nIngrese una opción válida (1-6)")
+
+    match opcion:
+        case 1:  # Vertice
+            input(datos.vertice())
+            menuFunCuad(datos)
+
+        case 2:  # Raices Reales
+            input(datos.raices())
+            menuFunCuad(datos)
+
+        case 3:  # Ordenada al Origen
+            input(datos.ordenada())
+            menuFunCuad(datos)
+
+        case 4:  # Forma
+            input(datos.forma())
+            menuFunCuad(datos)
+
+        case 5:  # Volver
+            menuCientifica()
+
+        case 6:  # Salir
+            sys.exit()
+
+

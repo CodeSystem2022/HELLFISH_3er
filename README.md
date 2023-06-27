@@ -28,7 +28,8 @@
 |   9    | [@FrancoFB](https://github.com/FrancoFB) |    [Proyecto 823](https://github.com/orgs/CodeSystem2022/projects/823)     |
 |  10    | [@elfabri](https://github.com/elfabri) |    [Proyecto 853](https://github.com/orgs/CodeSystem2022/projects/853)     |
 |  11    | [@ludmilailen](https://github.com/ludmilailen) |    [Proyecto 956](https://github.com/orgs/CodeSystem2022/projects/956/views/1?layout=board)    |
-|  11    | [Proyecto Integrador Python](https://github.com/CodeSystem2022/HELLFISH_3er/tree/main/Proyecto%20Python) |    [Proyecto 693](https://github.com/orgs/CodeSystem2022/projects/693)     |
+|  12    | [@Ana Ascua](https://github.com/aniascua) |    [Proyecto 982](https://github.com/orgs/CodeSystem2022/projects/982/views/1)    |
+|  13    | [Proyecto Integrador Python](https://github.com/CodeSystem2022/HELLFISH_3er/tree/main/Proyecto%20Python) |    [Proyecto 693](https://github.com/orgs/CodeSystem2022/projects/693)     |
 
 # Metodología de trabajo SCRUM
 - *Product Backlog:* Lista de tareas que se deben implementar en el proyecto 

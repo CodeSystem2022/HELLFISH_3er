@@ -42,7 +42,7 @@ class Inventario:
         except Exception as e:
             print(f"Error al ingresar datos: {e}")
 
-@classmethod
+    @classmethod
     def borrarDatos(cls):
         # Borramos datos en la tabla de la bd
         try:

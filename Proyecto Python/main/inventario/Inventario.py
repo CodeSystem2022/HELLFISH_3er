@@ -42,3 +42,66 @@ class Inventario:
         except Exception as e:
             print(f"Error al ingresar datos: {e}")
 
+@classmethod
+    def borrarDatos(cls):
+        # Borramos datos en la tabla de la bd
+        try:
+            if cls.hayDatos():
+                cursor = cls._conexion.cursor()
+
+                cursor.execute(cls._ELIMINAR)
+                cursor.execute(cls._REINICIAR)
+                cls._conexion.commit()
+
+                cursor.close()
+                # print("Datos borrados")
+
+            # else:
+                # print("No hay datos para borrar")
+
+        except Exception as e:
+            print(f"Error al borrar datos: {e}")
+
+    @classmethod
+    def mostrarDatos(cls):
+        # Imprime en pantalla los datos que se encuentren, con un tab al inicio
+        try:
+            # Verificamos que existan datos
+            hay = cls.hayDatos()
+            if hay:
+                cursor = cls._conexion.cursor()
+
+                cursor.execute(cls._SELECCIONAR)
+                rows = cursor.fetchall()
+
+                total = 0
+                print("\nArtículos en inventario:")
+                for row in rows:
+                    total += row[4]
+                    print(f"\t - Producto: {row[1]}, Cantidad: {row[2]}, Precio: {row[3]}, SubTotal: {row[4]}")
+
+                print(f"\n\t\t - Total: {total}\n")
+                cursor.close()
+
+            else:
+                print("No hay datos para mostrar")
+
+        except Exception as e:
+            print(f"Error al mostrar datos: {e}")
+
+    @classmethod
+    def cerrarConn(cls):
+        print("Cerrando conexión con base de datos")
+        try:
+            cls._conexion.close()
+        except Exception as e:
+            print(f"Error al cerrar la base de datos: {e}")
+
+
+if __name__ == "__main__":
+    Inventario.insertarDatos("algo", 4, 4.20, 2344)
+    Inventario.mostrarDatos()
+    Inventario.borrarDatos()
+    Inventario.borrarDatos()  # Debería no poder
+    Inventario.mostrarDatos()
+    Inventario.cerrarConn()

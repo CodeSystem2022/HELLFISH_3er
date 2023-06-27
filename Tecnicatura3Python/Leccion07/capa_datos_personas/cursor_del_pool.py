@@ -12,3 +12,13 @@ class CursorDelPool:
         self._conexion = Conexion.obtenerConexion()
         self._cursor = self._conexion.cursor()
         return self._cursor
+
+'''
+
+# 11.4 Pruebas del CursorDelPool -> Parte 1:
+if _name_ == '_main_':
+    with CursorDelPool() as cursor:
+        log.debug('Dentro del bloque with')
+        cursor.execute('SELECT * FROM persona')
+        log.debug(cursor.fetchall())
+'''

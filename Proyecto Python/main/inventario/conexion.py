@@ -20,3 +20,31 @@ def crear_base_datos():
 
     cursor.close()
     conn.close()
+
+
+def crear_tabla():
+    # Creamos tabla en caso de que esta no exista
+    conn = bd.connect(
+            host="127.0.0.1",
+            port="5432",
+            user="postgres",
+            password="admin",
+            database="hellfish3"
+            )
+
+    cursor = conn.cursor()
+
+    create_table_query = '''
+        CREATE TABLE IF NOT EXISTS carrito (
+            id_art SERIAL PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            cantidad INTEGER NOT NULL,
+            precio NUMERIC(10, 2) NOT NULL,
+            cantpre NUMERIC(10, 2) NOT NULL
+        );
+    '''
+    cursor.execute(create_table_query)
+
+    conn.commit()
+    cursor.close()
+    conn.close()

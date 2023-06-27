@@ -15,3 +15,14 @@ class Inventario:
 
     # Conexión
     _conexion = Conexion.obtenerConexion()
+
+# Marcamos la existencia de datos
+    @classmethod
+    def hayDatos(cls):
+        # Devuelve True si existen datos
+        cursor = cls._conexion.cursor()
+        cursor.execute(cls._SELECCIONAR)
+        rows = cursor.fetchall()
+        cursor.close()
+        return True if rows else False
+        

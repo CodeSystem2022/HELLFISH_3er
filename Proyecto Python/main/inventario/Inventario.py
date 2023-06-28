@@ -26,7 +26,7 @@ class Inventario:
         cursor.close()
         return True if rows else False
 
-     @classmethod
+    @classmethod
     def insertarDatos(cls, nombre, cantidad, precio, cantpre):
         # Creamos cursor con el que insertaremos datos en la tabla de la bd
         # Los datos que llegan deben estar previamente verificados

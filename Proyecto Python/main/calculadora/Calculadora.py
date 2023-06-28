@@ -2,6 +2,7 @@ from math import log, sqrt
 # Creamos funciones para realizar operaciones aritméticas
 # y devolvemos mensajes listos para imprimir
 
+
 def sumar(n1, n2):
     return f"\n\t{n1} + {n2} = {n1 + n2}"
 

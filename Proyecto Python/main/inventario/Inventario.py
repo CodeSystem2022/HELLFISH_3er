@@ -16,7 +16,7 @@ class Inventario:
     # Conexión
     _conexion = Conexion.obtenerConexion()
 
-    # Marcamos la existencia de datos
+# Marcamos la existencia de datos
     @classmethod
     def hayDatos(cls):
         # Devuelve True si existen datos

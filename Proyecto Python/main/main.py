@@ -26,7 +26,7 @@ def menuPrincipal():
         case 2:
             menuInventario()
         case 3:
-            return
+            sys.exit()
 
 
 def menuCalculadora():
@@ -286,13 +286,14 @@ def menuFunCuad(datos=None):
 
 
 def menuInventario():
+    print("\n*** Inventario ****\n")
+    print("1- Cargar Información")
+    print("2- Ver Resultados")
+    print("3- Volver")
+    print("4- Salir")
+
     opcion = 0
     while (opcion < 1 or opcion > 4):
-        print("\n*** Inventario ****\n")
-        print("1- Cargar Información")
-        print("2- Ver Resultados")
-        print("3- Volver")
-        print("4- Salir")
         try:
             opcion = int(input("\nIngrese una opción: "))
         except Exception:

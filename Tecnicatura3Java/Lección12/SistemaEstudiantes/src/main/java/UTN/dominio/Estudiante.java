@@ -1,4 +1,3 @@
-// 12.1 Creamos la Clase entidad Estudiante (yo):
 package UTN.dominio;
 
 public class Estudiante {
@@ -86,5 +85,3 @@ public class Estudiante {
                 '}';
     }
 }
-
-

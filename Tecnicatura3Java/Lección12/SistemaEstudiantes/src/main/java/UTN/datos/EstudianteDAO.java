@@ -15,11 +15,7 @@ public class EstudianteDAO {
         // Creamos algunos objetos que son necesarios para comunicarnos con la base de datos:
         PreparedStatement ps; // Ayuda a preparar la sentencia SQL y la envia a la base de datos
         ResultSet rs; // Obtiene el resultado de la consulta SQL en la base de datos
-
-
-    }
-
-}
+        
 // 12.5 Hacemos las pruebas del método -> Buscar un estudiante por ID()
 //        var estudiante1 = new Estudiante(1);
 //        System.out.println("Estudiantes antes de la búsqueda: "+estudiante1);

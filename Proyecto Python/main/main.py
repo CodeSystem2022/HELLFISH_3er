@@ -153,7 +153,6 @@ def menuCientifica():
         except Exception:
             print("\nIngrese una opción válida (1-6)")
 
-    n1 = n2 = "a"
 
     match opcion:
 
@@ -222,6 +221,8 @@ def cargarFC():
     while True:
         try:
             n1 = float(input("a = "))
+            if n1 == 0 or n1 == 0.0:
+                raise Exception
             break
         except Exception:
             print("Por favor, solo ingrese números")
@@ -231,7 +232,7 @@ def cargarFC():
             n2 = float(input("b = "))
             break
         except Exception:
-            print("Por favor, solo ingrese números")
+            print("Por favor, ingrese un numero no nulo")
 
     while True:
         try:
@@ -351,7 +352,7 @@ def menuInventario():
                 # Verificación precio válido
                 while True:
                     try:
-                        precio = int(input(f"\n\tPRECIO del artículo {i+1}: "))
+                        precio = float(input(f"\n\tPRECIO del artículo {i+1}: "))
                         if (precio <= 0):
                             raise Exception
                         else:

@@ -221,6 +221,8 @@ def cargarFC():
     while True:
         try:
             n1 = float(input("a = "))
+            if n1 == 0 or n1 == 0.0:
+                raise Exception
             break
         except Exception:
             print("Por favor, solo ingrese números")
@@ -230,7 +232,7 @@ def cargarFC():
             n2 = float(input("b = "))
             break
         except Exception:
-            print("Por favor, solo ingrese números")
+            print("Por favor, ingrese un numero no nulo")
 
     while True:
         try:

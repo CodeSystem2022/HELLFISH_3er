@@ -20,3 +20,13 @@ public class EstudianteDAO {
     }
 
 }
+// 12.5 Hacemos las pruebas del método -> Buscar un estudiante por ID()
+//        var estudiante1 = new Estudiante(1);
+//        System.out.println("Estudiantes antes de la búsqueda: "+estudiante1);
+//        var encontrado = estudianteDao.buscarEstudiantePorID(estudiante1);
+//        if(encontrado)
+//            System.out.println("Estudiante encontrado: "+estudiante1);
+//        else
+//            System.out.println("No se encontró al estudiante: "+estudiante1.getIdEstudiante());
+    }
+}

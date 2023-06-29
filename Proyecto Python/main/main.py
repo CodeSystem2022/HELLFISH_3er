@@ -351,7 +351,7 @@ def menuInventario():
                 # Verificación precio válido
                 while True:
                     try:
-                        precio = int(input(f"\n\tPRECIO del artículo {i+1}: "))
+                        precio = float(input(f"\n\tPRECIO del artículo {i+1}: "))
                         if (precio <= 0):
                             raise Exception
                         else:

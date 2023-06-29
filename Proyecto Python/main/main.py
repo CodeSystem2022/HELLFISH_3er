@@ -153,7 +153,6 @@ def menuCientifica():
         except Exception:
             print("\nIngrese una opción válida (1-6)")
 
-    n1 = n2 = "a"
 
     match opcion:
 

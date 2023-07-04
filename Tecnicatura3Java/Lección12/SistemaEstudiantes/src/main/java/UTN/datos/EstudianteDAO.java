@@ -20,7 +20,17 @@ public class EstudianteDAO {
         ResultSet rs; // Obtiene el resultado de la consulta SQL en la base de datos
         //Creamos un objeto de tipo Conexion
         Connection con = getConnection();
-        String sql = "SELECT * FROM "
+        String sql = "SELECT * FROM estudiantes2022 ORDER BY estudiantes2022";
+        try{
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                var estudiante = new Estudiante;
+                estudiante.setIdEstudiante(rs.getInt("idestudiante2022"))
+            }
+        } catch (Exception e){
+            System.out.println("Ocurrio un error al seleccionar datos: "+e.getMessage());
+        }
 // 12.5 Hacemos las pruebas del método -> Buscar un estudiante por ID()
 //        var estudiante1 = new Estudiante(1);
 //        System.out.println("Estudiantes antes de la búsqueda: "+estudiante1);

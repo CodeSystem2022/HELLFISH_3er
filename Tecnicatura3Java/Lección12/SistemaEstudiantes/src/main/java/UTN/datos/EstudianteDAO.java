@@ -26,11 +26,29 @@ public class EstudianteDAO {
             rs = ps.executeQuery();
             while(rs.next()){
                 var estudiante = new Estudiante;
-                estudiante.setIdEstudiante(rs.getInt("idestudiante2022"))
+                estudiante.setIdEstudiante(rs.getInt("idestudiante2022"));
+                estudiante.setNombre(rs.getString("Nombre"));
+                estudiante.setApellido(rs.getString("Apellido"));
+                estudiante.setTelefono(rs.getString("Telefono"));
+                estudiante.setEmail(rs.getString("Email"));
+                //Falta agregarlo a la lista
+                estudiantes.add(estudiante);
             }
         } catch (Exception e){
             System.out.println("Ocurrio un error al seleccionar datos: "+e.getMessage());
         }
+        finally {
+            try {
+                con.close();
+            } catch (Exception e) {
+                System.out.println ("Ocurrio un error al cerrar la conexion:   "+e.getMessage()); 
+            }
+
+            } //Fin Finally
+            return estudiantes;
+
+        } //Fin del metodo listar
+
 // 12.5 Hacemos las pruebas del método -> Buscar un estudiante por ID()
 //        var estudiante1 = new Estudiante(1);
 //        System.out.println("Estudiantes antes de la búsqueda: "+estudiante1);

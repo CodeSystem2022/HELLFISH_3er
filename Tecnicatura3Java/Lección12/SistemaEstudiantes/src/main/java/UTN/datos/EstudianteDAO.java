@@ -81,6 +81,36 @@ public boolean buscarEstudiantePorID(Estudiante estudiante){
     }//Fin finally
     return false;
 }
+
+//12.6 Método agregarEstudiante() -> Parte 1 y 2
+public boolean agregarEstudiante(Estudiante estudiante){
+    PreparedStatement ps;
+    Connection con = getConnection();
+    String sql = "INSERT INTO estudiantes2022 (nombre, apellido, telefono, email) VALUES (?, ?, ?, ?)";
+    try{
+        ps = con.prepareStatement(sql);
+        ps.setString(1, estudiante.getNombre());
+        ps.setString(2, estudiante.getApellido());
+        ps.setString(3, estudiante.getTelefono());
+        ps.setString(4, estudiante.getEmail());
+        ps.execute();
+        return true;
+
+    } catch(Exception e){
+        System.out.println("Ocurrio un error al agregar estudiante: "+e.getMessage());
+    }//Fin catch
+    finally {
+        try{
+            con.close();
+        } catch (Exception e){
+            System.out.println("Error al cerrar la conexion: "+e.getMessage())
+        }//Fin catch
+    }//Fin finally
+    
+    return false;
+
+}//Fin metodo agregarEstudiante
+
 //12.3 Comenzamos con las pruebas del método listarEstudiantes() -> solucionamos algunos errores de conexión
 public static void main(String[] args) {
     //Listar los Estudiantes

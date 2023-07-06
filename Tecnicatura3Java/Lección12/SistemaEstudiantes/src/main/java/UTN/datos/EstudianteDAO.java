@@ -89,6 +89,14 @@ public static void main(String[] args) {
     List<Estudiante> estudiantes = estudianteDao.listarEstudiantes()
     estudiantes.forEach(System.out::println); //Funcion lamda para imprimir
 
+    //Metodo Agregar estudiante
+var nuevoEstudiante = new Estudiante("Carlos","Lara","2604554433","carlosl@gmail.com");
+var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
+if(agregado)
+    System.out.pirntln("Estudiante agregado: "+nuevoEstudiante);
+else
+    System.out.pirntln("No se ha agregado estudiante: "+nuevoEstudiante);
+
 // 12.5 Hacemos las pruebas del método -> Buscar un estudiante por ID()
     
     var estudiante1 = new Estudiante(1);

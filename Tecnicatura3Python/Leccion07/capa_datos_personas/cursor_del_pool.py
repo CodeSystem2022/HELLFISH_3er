@@ -1,7 +1,7 @@
 from logger_base import log
 from conexion import Conexion
 
-# 11.3 Creamos la Clase CursorDelPool -> Parte 1 (yo):
+# 11.3 Creamos la Clase CursorDelPool
 class CursorDelPool:
     def __init__(self):
         self._conexion = None
@@ -12,13 +12,22 @@ class CursorDelPool:
         self._conexion = Conexion.obtenerConexion()
         self._cursor = self._conexion.cursor()
         return self._cursor
+    
+    def __exit__(self, tipo_exception, valor_exception, detalle_exception):
+        log.debug('Se ejecuta el método exit')
+        if valor_exception:
+            self._conexion.rollback()
+            log.debug(f'Ocurrio una excepcion: {valor_exception}')
+        else:
+            self._conexion.commit()
+            log.debug('Commit de la transaccion')
+        self._cursor.close()
+        Conexion.liberarConeccion(self._conexion)
 
-'''
 
-# 11.4 Pruebas del CursorDelPool -> Parte 1:
+# 11.4 Pruebas del CursorDelPool
 if _name_ == '_main_':
     with CursorDelPool() as cursor:
         log.debug('Dentro del bloque with')
         cursor.execute('SELECT * FROM persona')
         log.debug(cursor.fetchall())
-'''
